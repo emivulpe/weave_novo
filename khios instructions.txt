@@ -1,0 +1,8 @@
+open putty
+session->host name: sibu.gla.ac.uk
+login with username and password
+type in: ssh khios
+cd /var/www/DJANGO/
+...
+go in the repo
+type git pull

@@ -1,0 +1,3145 @@
+<?xml version="1.0" ?>
+<processes>
+<process name ="DrawingClockProgram" app = "ClockExample" processID ="00000000-0000-0000-0000-00000000003f">
+<step num = "1">
+<change num = "1">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000007">Problem : Write a program to place the numbers 1 to 12 as if they were on a clock face.;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000009">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000008">-------------------------------------------------------------------------------------------------------------------------------------------;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Here is the problem.</explanation>
+</step>
+<step num = "2">
+<explanation>What kind of context is this?  What libraries do we need?  We've seen textual output and now Canvas or graphical output.</explanation>
+</step>
+<step num = "3">
+<change num = "1">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000020">complete();</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000001f"> ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000000e">from Canvas import * ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000000d"> ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000000c"># Quintin Cutts 8 - 11 - 2013 ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000000b"># if they were on a clock face. ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000000a"># Write a program to place the numbers 1 to 12 as  ;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>It's graphical, so let's put the essentials into the program ? we need to import the Canvas library and when drawing a picture, we need to finish the program with a call to the complete function.</explanation>
+</step>
+<step num = "4">
+<explanation>Is the solution to this problem principally a loop, a conditional or a sequence?</explanation>
+</step>
+<step num = "5">
+<explanation>It's a loop.  Why?  Because we've got these 12 numbers to print out ? so we're doing something 12 times.</explanation>
+</step>
+<step num = "6">
+<change num = "1">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000001b">    hour = hour + 1 ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000015"> ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000000f"> ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000016">while hour &lt;= 12: ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000010">hour = 1 ;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Let's create that bit.  We need a stepper variable to take us through the 12 hours, from 1 to 12, and the while loop structure?</explanation>
+</step>
+<step num = "7">
+<change num = "1">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000001a">    print hour ;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>We could test this now by simply putting &quot;print hour&quot; into the loop body, to see if we are counting through the right hours.  </explanation>
+</step>
+<step num = "8">
+<change num = "1">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000001a">    print hour ;</fragname>
+<operation>Delete</operation>
+</change>
+<explanation>Ok, that works correctly.  Note I've removed the testing code that prints out the hour value.  Now we need to put the hour numbers in the right places.  Considering the graphical drawing tools we've seen, can you think how to do this?</explanation>
+</step>
+<step num = "9">
+<explanation>Well, in case you need them, here are some hints:  The numbers lie on a circle.  You've seen functions that, given a starting point, angle and length, give you the point at the end of a line of the given length running from the starting point at the given angle.  Can you see what we need to do?</explanation>
+</step>
+<step num = "10">
+<change num = "1">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000015"> ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000014">y_centre = 100 ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000013">x_centre = 100 ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000012">radius = 80 ;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>We need a centre point and a radius.</explanation>
+</step>
+<step num = "11">
+<explanation>We need a starting angle.  Straight down is 0 degrees (e.g. the six o'clock angular position) and it increases anticlockwise.  What is angular position therefore of 1 o'clock?</explanation>
+</step>
+<step num = "12">
+<change num = "1">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000011">angle = 150 ;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Well, there are 12 hours, and 360 degrees, in a circle, so the angular distance between each hour is 30 degrees.    Hence the 1 o'clock position is five hours around, or an angular distance of 150 degrees.  This is what we'll set the angle variable to?</explanation>
+</step>
+<step num = "13">
+<change num = "1">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000017">    num_x,  num_y = end_point( x_centre, y_centre, radius, angle ) ;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>We have a centre, now we need to calculate the position at which to put the 1 o'clock digit.  We'll use the end_point function.  These will give us the x and y values respectively that we need, given that we're calling them with the centre point, radius and angle as parameters.</explanation>
+</step>
+<step num = "14">
+<change num = "1">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000018">    create_text( num_x, num_y, text=str( hour ) ) ;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>We now have the position of the digit.  Let's draw the hour digit, using create_text.  We pass the x, y values for the position, and then we have to use the unusual syntax for giving the text to be written itself.  We write &quot;text=&quot; because this is an optional parameter for some reason.  And hour is a number, so we need to convert it into a string, using str, before it can be displayed using create_text.</explanation>
+</step>
+<step num = "15">
+<explanation>This is looking good.  Is anything missing, or are you ready to type it in and run it?</explanation>
+</step>
+<step num = "16">
+<change num = "1">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000019">    angle = angle + 30 ;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>There IS one more thing - the angle is not being updated, so all the numbers would appear in the same place!</explanation>
+</step>
+<step num = "17">
+<change num = "1">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000001c"> ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>ClockDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000001e">create_oval( 10,10,190,190 ) ;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>And to finish, you can add a circle for the clock face.</explanation>
+</step>
+<step num = "18">
+<explanation>I think we're done now.  You can use the navigation buttons to go back and explore any of the earlier steps.</explanation>
+</step>
+</process>
+<process name ="HorizontalLinesProgram" app = "HorizontalLines" processID ="00000000-0000-0000-0000-000000000067">
+<step num = "1">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000027">----------------------------------;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000026">Problem:  Draw 10 parallel horizontal lines, each 100 long, starting at (10,10) and spaced 10 apart, going downwards.;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>This is the problem.  If you're stuck on how to solve this problem, rather than just checking a solution you already have created, then you should have Python Idle open alongside IWE, and you can type in the code as we're going along.</explanation>
+</step>
+<step num = "2">
+<explanation>So, it's a drawing we're being asked to create, requiring graphical, not textual, output ? so what do we need at the start and end of the program?</explanation>
+</step>
+<step num = "3">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000002d">from Canvas import *;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000028">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000039">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000003a">complete()</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>That's right, Canvas import, and the call to complete at the end.</explanation>
+</step>
+<step num = "4">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000002c">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000002b"># Quintin 8 - 11 - 13;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000002a"># each 100 long, spaced 10 apart.  First line starts at (10,10);</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000029"># Write a program to draw 10 parallel horizontal lines,;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Note that we should always include a comment to explain what the program does, and who wrote it. </explanation>
+</step>
+<step num = "5">
+<explanation>Is the solution to this problem principally a loop, a conditional or a sequence?</explanation>
+</step>
+<step num = "6">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<operation>Ask Answer</operation>
+<question num = "6" content="Is the solution going to be principally a repetition, a conditional or a sequence?" type="MULTI_CHOICE">
+<option num ="0"  content="Repetition (e.g. while loop)"></option>
+<option num ="1"  content="Conditional (e.g. if then)"></option>
+<option num ="2"  content="Sequence (e.g. just a series of steps one after another)"></option>
+<option num ="3"  content="I don't know"></option>
+</question>
+</change>
+<explanation>Don't know what to put here!!  Should the quesiton etc and my answer comment go here?</explanation>
+</step>
+<step num = "7">
+<explanation>The question was whether the solution here is mainly a repetition, a conditional, or a sequence.  The right answer for this one is a repetition.  Why?  Because we're creating 10 very similar lines - the fixed part of the action is the line ? it's the same size/dimensions every time - only the position is changing each time.</explanation>
+</step>
+<step num = "8">
+<explanation>Can you create the loop now?  Hold in your mind what you think is needed, and then read ahead...</explanation>
+</step>
+<step num = "9">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000034">    create_line( x1, y1, x2, y2 );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000031">;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Did you get it?  We need a stepper variable to take us through the 10 lines, and the while loop structure?  We're going to use the stepper variable in a slightly different way this time... Let's examine the 'create_line' code that's shown above for a moment..</explanation>
+</step>
+<step num = "10">
+<explanation>At this stage, let's not worry about the precise arguments.  If we draw a number of horizontal lines, what will change on each call to create_line?</explanation>
+</step>
+<step num = "11">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<operation>Ask Answer</operation>
+<question num = "11" content="We are planning to draw a number of horizontal lines, using create_line.  Which arguments to create_line will change on each call?" type="MULTI_CHOICE">
+<option num ="0"  content="x1 and x2"></option>
+<option num ="1"  content="y1 and y2"></option>
+<option num ="2"  content="x1, x2, y1 and y2"></option>
+<option num ="3"  content="Some other combination"></option>
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "12">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000034">    create_line( x1, y1, x2, y2 );</fragname>
+<operation>Delete</operation>
+</change>
+<change num = "2">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000035">    create_line( 10, y1, 110, y2 );</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>So - it's the two y values that changes each time.  We've fixed the x values ? the start and end x values of 10 and 110, for a horizontal line 100 long - as shown here.
+
+Now, the y values increases by 10 each time a line is drawn.  Are the two y values the same or different?
+</explanation>
+</step>
+<step num = "13">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<operation>Ask Answer</operation>
+<question num = "13" content="On each individual call to create_line, are the two y values  the same, or different?" type="MULTI_CHOICE">
+<option num ="0"  content="The same"></option>
+<option num ="1"  content="Different"></option>
+<option num ="2"  content="I don't understand the question"></option>
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "14">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000036">    create_line( 10, y, 110, y );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000035">    create_line( 10, y1, 110, y2 );</fragname>
+<operation>Delete</operation>
+</change>
+<explanation>The question was whether, on each call to create_line, the values for y1 and y2 were the same or different.
+
+They are the same.  We're drawing horizontal lines, so the y value of the start and the end is the same.  So we can fix this in our create_line call, as shown here - where we've used just one variable name for both y values.</explanation>
+</step>
+<step num = "15">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000037">    y = y + ??;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000032">while y &lt;= ??:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000002f">y = ??;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000002e">;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>So having thought that through, we can now craft our while loop to suit.  Instead of counting up by 1 each time, as we have before, we can use the y value itself as a stepper.  In that case, what should the ?? fragments be replaced with, in the code above?</explanation>
+</step>
+<step num = "16">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<operation>Ask Answer</operation>
+<question num = "16" content="What 3 values should replace the three ??s shown above?" type="MULTI_CHOICE">
+<option num ="0"  content="1, 10, 1"></option>
+<option num ="1"  content="10, 100, 10"></option>
+<option num ="2"  content="10, 110, 10"></option>
+<option num ="3"  content="I don't know"></option>
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "17">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000038">    y = y + 10;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000033">while y &lt;= 100:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000030">y = 10   # This is the value changing on each loop;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>The question was what should replace the three ?? segments in the code that was showing.  Options were 1, 10, 1, or 10, 100, 10, or 10, 110, 10.
+
+The correct answer is 10, 100, 10, as is now shown.  We start at y = 10 (starting at (10,10) remember).  The lines are 10 apart, so the update is to add 10 each time round the loop.  We'll therefore have drawn ten lines when y is at 100.  Once y is greater than 100, we should stop, hence continuing while y &lt;= 100.
+
+Click forward to remove the incomplete lines.</explanation>
+</step>
+<step num = "18">
+<change num = "1">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000002f">y = ??;</fragname>
+<operation>Delete</operation>
+</change>
+<change num = "2">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000032">while y &lt;= ??:;</fragname>
+<operation>Delete</operation>
+</change>
+<change num = "3">
+<docname>HorizontalLinesDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000037">    y = y + ??;</fragname>
+<operation>Delete</operation>
+</change>
+<explanation>This is looking good.  Is anything missing, or are you ready to run it?</explanation>
+</step>
+<step num = "19">
+<explanation>I don't think so - I think we're done.</explanation>
+</step>
+</process>
+<process name ="ListProcessingFunctionsExample" app = "ListProcessingFunctions" processID ="00b251fa-0b48-43a2-a37f-23f160a11191">
+<step num = "1">
+<explanation>Learning Objectives for this worked example:
+1.  See how to use functions to help you process lists
+2.  Understand precisely how lists are passed as arguments to functions
+3.  Follow the thinking process involved in problem solving
+
+All of these may well be of use as you consider how to solve the lab exam problem.
+
+Be sure to read these explanation steps as you go through the worked example - they attempt to capture the experience of the expert as they solve the problem, their thinking process, and absorbing this should accelerate your learning.</explanation>
+</step>
+<step num = "2">
+<change num = "1">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c3">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c2">second function should change words in place in the list - it does not need to return anything.;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c1">The first function should create and return a new list containing all the words, and the ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c0">For any word that has a lowercase first letter, the first letter should be converted to upper case.;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000bf"> to see if the first letter is upper or lower case. ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000be">They should both take a list of words and they should both check each word</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000bd">Write two functions.;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "8">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000bc">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "9">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000bb">The Problem;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Here is the problem.  Before going any further with this worked example, you should try to solve the problem yourself first, at least on paper.  You may find you can solve it without any assistance, but whether you can or you can't, you'll find that you tend to read the worked example explanations more carefully once you have had a go, as you are more immersed in the problem.</explanation>
+</step>
+<step num = "3">
+<explanation>When starting off with a problem, an expert will be asking, and answering, a series of questions about the problem.  For a small problem like this one, the expert can do all of this in his/her head.  For a novice, it is probably better to write this all down, in sketchy note form.  It's just for you, not for anyone else, so it need not be beautiful.  So, in the explanation box down here, I'll jot down the kind of questions and answers to be thinking of...</explanation>
+</step>
+<step num = "4">
+<explanation>How am I going to go about this?  This is a question at the tools level - can I see roughly how it's going to work?  For this step, I may well need to write some test data, play around with it, imagine I'm solving the problem on this data.  While I'm doing this playing around, I can consider how the actions I'm taking compare with the kinds of actions or tools available in the programming language.</explanation>
+</step>
+<step num = "5">
+<explanation>In this case, the problem is not complex enough to need to write down a load of test data.  I have a list of words, some with a capitalised first letter, some without.  I need to traverse the list of words, examining each one.  For those without a capitalised first letter, I need to convert the word so that it does have a capitalised first letter.</explanation>
+</step>
+<step num = "6">
+<change num = "1">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000cc">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000cb">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000ca">          change it so that it does start with a capital;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c9">     if the word does not start with a capital letter;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c8">for each word in the list;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c7">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c6">This is a rough plan for the body of the functions;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "8">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c5">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "9">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c4">The Plan;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>I can convert this &quot;thinking out loud&quot; into a plan - a set of steps half way between the problem and the solution in code.  Here it is, above.</explanation>
+</step>
+<step num = "7">
+<explanation>Now, can I solve all parts of this plan?  Do I know the Python I'll need to do this? 
+
+For example, how do I check if the first letter of a word is lowercase? Well...
+     1.  I can use the string of lowercase letters in the 'string' module, and then
+     2.  test to see if the first letter is in this string - using the 'in' operator
+
+Ok, that's good, I know how to do that bit...
+</explanation>
+</step>
+<step num = "8">
+<explanation>Can I change a letter in a string?
+
+No - but I can create a new string by concatenating (+) two strings - , the capitalised first letter is one and the second is the rest of the letters from the old string.
+
+Ok, it looks as though we know how to do the main bit of list/string processing.  So let's get going and write the two functions - explaining the differences as we go along.
+</explanation>
+</step>
+<step num = "9">
+<change num = "1">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000e1">def capitaliseInPlace( words ):;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000e0"># list supplied as parameter;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000df"># function to capitalise first letter of all words in;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000de">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000d4">def capitaliseNew( words ):;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000d3"># first letters.;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000d2"># words in supplied list, ensuring all have capitalised;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "8">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000d1"># function to create and return a list containing all;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "9">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000d0">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "10">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000cf">from string import *;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "11">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000ce">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "12">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000cd">The Program;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>We're going to be using items from the string module, so let's import that.  And then we have the headers for the two functions - picking appropriate names to distinguish the two.  Both take a single parameter, the list of words.</explanation>
+</step>
+<step num = "10">
+<change num = "1">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000dd">    return newWords;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000d6">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000d5">    newWords = [];</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>We have the function headers now.  Next question: do these functions return anything?
+
+In the first version, we don't want to change any of the words in the list that has been passed to the function.  Instead we will create a new list and return that, as shown here.
+
+In the second version, we need do nothing of this kind.  Because of the way that lists are held in variables and passed to functions, any change made to a list passed to a function, while it is being manipulated by the function, will be seen in the calling context.  Hence we can update words in the list, and the changes will be reflected wherever else the list can be accessed.
+
+If this is confusing, read the on-line text book - Sections 9.8, 9,10 and 9.11.
+</explanation>
+</step>
+<step num = "11">
+<explanation>To convert our plan into code, we are going to be writing code to traverse the list of words.  You may remember from the lectures that there are different kind of traversals.  Two of them, applied to our list of words, are:
+     for word in words:
+and
+     for wordIndex in range( len( words ) ):
+The next step asks a question about which of these should be used in our two functions
+</explanation>
+</step>
+<step num = "12">
+<change num = "1">
+<docname>listProcessingFunctionsDoc</docname>
+<operation>Ask Answer</operation>
+<question num = "12" content="Two kinds of list traversals we?ve come across are: 1.)     for word in words and 2.)     for wordIndex in range( len( words ) ): Which should be used in capitaliseNew and capitaliseInPlace? " type="MULTI_CHOICE">
+<option num ="0"  content="Both should use (1)"></option>
+<option num ="1"  content="Both should use (2)"></option>
+<option num ="2"  content="capitaliseNew should use (1), capitaliseInPlace should use (2)"></option>
+<option num ="3"  content="capitaliseNew should use (2), capitaliseInPlace should use (1)"></option>
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "13">
+<explanation>Question was, which kind of list traversal should we use, choosing from
+1.)     for word in words:
+2.)     for wordIndex in range( len( words ) ):
+
+The answer options were
+A.	Both should use (1)
+B.	Both should use (2)
+C.	capitaliseNew should use (1), capitaliseInPlace should use (2)
+D.	capitaliseNew should use (2), capitaliseInPlace should use (1)
+
+The issue raised in the lecture was whether, during the traversal, the contents of a list element was only being looked at, or whether it was (also) being updated.  If it's the former, then you can use (1), but if it's the latter, then (2) is needed, so that we can write the necessary code to update a list element.  capitaliseNew only needs to look at the contents of the list as any changes are being reflected in the new list, whereas capitaliseInPlace is updating the list - hence the correct answer is C.
+</explanation>
+</step>
+<step num = "14">
+<change num = "1">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c8">for each word in the list;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000e2">    for wordIndex in range( len( words ) ):;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000dc">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000d7">    for word in words:;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>So we can now put in the first line of the plan for the two functions</explanation>
+</step>
+<step num = "15">
+<change num = "1">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000ca">          change it so that it does start with a capital;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c9">     if the word does not start with a capital letter;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c8">for each word in the list;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "4">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000db">            newWords += [word];</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000da">        else:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000d9">            newWords += [upper( word[ 0 ] ) + word[ 1: ]];</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000d8">        if word[ 0 ] in lowercase:;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Considering only the capitaliseNew function for a moment, we can test the first character of the word we are currently looking at.  If it is lowercase, then we construct a new word as required and add it to the new list of words we are creating.  If the first letter is already uppercase, then we simply add the word directly to our list.</explanation>
+</step>
+<step num = "16">
+<change num = "1">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000e5">            words[ wordIndex ] = upper( word[ 0 ] ) + word[ 1: ];</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000e4">        if word[ 0 ] in lowercase:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000e3">        word = words[ wordIndex ];</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Considering the capitaliseInPlace version, you can see that this time, if we find that the first letter of a word is lowercase, we do again construct a new version of the word, as before, but now we overwrite the original version in the list with this new version.</explanation>
+</step>
+<step num = "17">
+<change num = "1">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000c9">     if the word does not start with a capital letter;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "2">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000ca">          change it so that it does start with a capital;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "3">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000e7">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000e6">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000ef">print w;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000ee">capitaliseInPlace( w );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000ed">print w;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "8">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000ec">print capitaliseNew( w );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "9">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000ea">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "10">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000e9">w = [ &quot;fred&quot;, &quot;Bob&quot;, &quot;harry&quot; ];</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "11">
+<docname>listProcessingFunctionsDoc</docname>
+<fragname id="00000000-0000-0000-0000-0000000000e8"># Testing code;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Finally, explore the simple testing code shown here.  There are three print statements - the first printing the list returned by capitaliseNew and the second and third of the variable w.  Predict what you think will be output by these before trying them yourself or moving to the next step.</explanation>
+</step>
+<step num = "18">
+<explanation>This is what you'd see:
+
+['Fred', 'Bob', 'Harry']
+['fred', 'Bob', 'harry']
+['Fred', 'Bob', 'Harry']
+
+You can see that after the call to capitaliseNew, the list w is unchanged from its original form in the program.  But after the call to capitaliseInPlace, it has taken on the updated names for 'fred' and 'harry', as required.
+</explanation>
+</step>
+<step num = "19">
+<explanation>So, to conclude:
+
+1.  See how you can write functions to process lists.  This breaks up your code, making it more readable,  You could do this for the phases of the lab exam problem.
+
+2.  Be sure you understand the way that lists are passed to functions - so that changes made to the list inside the function are 'seen' outside the function in the calling context.
+
+3.  When you write a function to process lists, consider whether you want to update elements inside the original list, or whether you'd rather have a new list which is an copy of the original with changes made.</explanation>
+</step>
+</process>
+<process name ="pentagonToShapeProgram" app = "pentagonToShape" processID ="00000000-0000-0000-0000-0000000000b3">
+<step num = "1">
+<change num = "1">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000089"># Quintin - 8-11-13;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000088"># number of sides and side length.;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000087"># Function to draw a regular shape, given starting point,;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000006c"># Draw a regular pentagon.;</fragname>
+<operation>Show all</operation>
+</change>
+<explanation>We have a different setup this time.  On the left above is a version of the pentagon program, and in the right pane we will develop a function to draw arbitrary regular shapes that is based on the pentagon code.  
+
+The purpose of this worked example is to show how the specialist pentagon code can be made more general enabling it to draw any regular shape.</explanation>
+</step>
+<step num = "2">
+<explanation>**Make your window bigger if you can - you can move the dividers between the panes too, for example, move the one above this pane to ensure you can see the whole explanation as well as the two code panes above.**</explanation>
+</step>
+<step num = "3">
+<change num = "1">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-0000000000a8">complete()</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-0000000000a7">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-0000000000a6">shape( 20,60,4,55 );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-0000000000a5">shape( 100, 180, 23, 20 );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-0000000000a4">shape( 30,30,3,30 );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000008c">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000008b">from Canvas import *;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "8">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000008a">;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Let's put in the basics - Canvas import, and some testing code, consisting of some calls that we'd expect to make to the new function, rounded off with a call to old faithful 'complete'.  
+
+[By the way, don't get into the habit of automatically putting 'complete()' at the end of every program, as some students have done in the past.  It is **just** for Canvas programs, and even then, only for those that draw a picture and do nothing else.]
+</explanation>
+</step>
+<step num = "4">
+<explanation>Let's start by putting in the function header.  We know exactly what parameters are expected (look back at the specification).  Before going to the next step, work out what you think it should be...</explanation>
+</step>
+<step num = "5">
+<change num = "1">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000095">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000091">): ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000090">sideLength</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000008f">numberOfSides,</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000008e">startX, startY,</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000008d">def shape(</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>We've been asked for four parameters and these are specified inside the brackets, with appropriate names.
+
+You may have noticed the use of so-called &quot;camel-case&quot; when creating variable names - names made up of multiple words all pushed together.  The first word starts with a lower case letter, but then each appended word starts with a capital letter - theoretically making it both easy to type and easy to read!  You can decide whether you like it...
+</explanation>
+</step>
+<step num = "6">
+<change num = "1">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000082">    lineCount += 1;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000077">while lineCount &lt; 5:;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000071">lineCount = 0;</fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>With the pentagon, there are 5 sides and so we repeat five times.</explanation>
+</step>
+<step num = "7">
+<change num = "1">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-0000000000a2">        lineCount += 1;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000096">    while lineCount &lt; numberOfSides:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000092">    lineCount = 0;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-0000000000a3">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000008f">numberOfSides,</fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>We can copy most of this straight over - just taking account of the fact that the number of sides is held in the parameter numberOfSides.</explanation>
+</step>
+<step num = "8">
+<change num = "1">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000073">startY = 100;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000072">startX = 100;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000082">    lineCount += 1;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "4">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000077">while lineCount &lt; 5:;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "5">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000071">lineCount = 0;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "6">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000008f">numberOfSides,</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>Do we need to copy over the startX, startY initialisations?</explanation>
+</step>
+<step num = "9">
+<change num = "1">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000008e">startX, startY,</fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>No.  Again, these are now parameters, and values will be supplied when the function is called.</explanation>
+</step>
+<step num = "10">
+<change num = "1">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000075">sideLength = 50;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000074">angle = 90;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000073">startY = 100;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "4">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000072">startX = 100;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "5">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000008e">startX, startY,</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>Working down the pentagon program, what should we do with angle and sideLength?</explanation>
+</step>
+<step num = "11">
+<change num = "1">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000093">    angle = 90;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000090">sideLength</fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>We can keep angle - this is just the starting value - this assumes that the first side drawn, no matter how many sides, always goes horizontally to the right.  And again, sideLength is now a parameter, so no explicit initialisation is now needed here.</explanation>
+</step>
+<step num = "12">
+<change num = "1">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000009f">        startY = endY;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000009e">        startX = endX;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000009d">        # Now get ready for next line;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000009c">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000009b">        create_line( startX, startY, endX, endY );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000009a">        # and draw it;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000099">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "8">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000098">        endX, endY = end_point( startX, startY, sideLength, angle );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "9">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000097">        # Generate the characteristics of the new line;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "10">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000080">    startY = endY;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "11">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000007f">    startX = endX;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "12">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000007e">    # Now get ready for next line;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "13">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000007c">    create_line( startX, startY, endX, endY );</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "14">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000007b">    # and draw it;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "15">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000079">    endX, endY = end_point( startX, startY, sideLength, angle );</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "16">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000078">    # Generate the characteristics of the new line;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "17">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000075">sideLength = 50;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "18">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000074">angle = 90;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "19">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000090">sideLength</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>Much of the body of the loop copies over directly without any change at all, as shown here...</explanation>
+</step>
+<step num = "13">
+<change num = "1">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000081">    angle += 72;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000080">    startY = endY;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "3">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000007f">    startX = endX;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "4">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000007e">    # Now get ready for next line;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "5">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000007c">    create_line( startX, startY, endX, endY );</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "6">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000007b">    # and draw it;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "7">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000079">    endX, endY = end_point( startX, startY, sideLength, angle );</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "8">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000078">    # Generate the characteristics of the new line;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>This just leaves the angle update.  What should we do with this?</explanation>
+</step>
+<step num = "14">
+<change num = "1">
+<docname>pentagonDocument</docname>
+<operation>Ask Answer</operation>
+<question num = "14" content="How should the angle be updated each time around the loop?  What expression can we use to replace the 72 in the pentagon example?" type="MULTI_CHOICE">
+<option num ="0"  content="Keep it the same, at 72"></option>
+<option num ="1"  content="360 / numberOfSides"></option>
+<option num ="2"  content="Something else"></option>
+<option num ="3"  content="I don't know"></option>
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "15">
+<change num = "1">
+<docname>pentagonDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000081">    angle += 72;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "2">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-0000000000a0">        angle += 360 / numberOfSides;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>360 / numberOfSides looks good, eh?  (just as 72 is the result of dividing 360 by 5.
+
+We seem to be done, so try it out now in Idle - particularly on the call
+        shape( 100, 180, 23, 20)</explanation>
+</step>
+<step num = "16">
+<explanation>It didn't join up properly on that example, did it?  Can you see why?</explanation>
+</step>
+<step num = "17">
+<change num = "1">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000094">    angleInc = 360.0 / numberOfSides;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-0000000000a1">        angle += angleInc;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>regularShapeDocument</docname>
+<fragname id="00000000-0000-0000-0000-0000000000a0">        angle += 360 / numberOfSides;</fragname>
+<operation>Delete</operation>
+</change>
+<explanation>It's that integer arithmetic again - the 360/23 is rounded down, and once you've totaled up 23 of the rounded down values, you don't end up with 360 degrees and so the shape doesn't close.
+
+A cleaner solution is shown here.  The update value is created outside the loop, taking care of the integer arithmetic, and then referred to in the angle update statement itself.
+</explanation>
+</step>
+</process>
+<process name ="RandomLineProgram" app = "RandomLine" processID ="00000000-0000-0000-0000-000000000069">
+<step num = "1">
+<change num = "1">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000044">------------------------------------------------------------;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000043">Write a program to draw a random segmented line.  More precisely, the line should start at (100, 100) and consist of 10 straight segments, connected so that the end of the first line joins up with the start of the second, and so on, to form one long line.  The length and orientation of each segment should be chosen at random, between the limits 0-50 and 0-359 respectively.;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>This is the problem.  If you're stuck on how to solve this problem, rather than just checking a solution you already have created, then you should have Python Idle open alongside IWE, and you can type in the code as we're going along.</explanation>
+</step>
+<step num = "2">
+<change num = "1">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000060">complete();</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000004d">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000004b">from Canvas import *;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000004a">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000049"># Quintin - 8-11-13;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000048"># The line should start at (100,100).;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000047"># start of the next, each a random length (between 0-50) and orientation.;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "8">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000046"># Draw a random segmented lines.  10 segments, end of one joined to;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "9">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000045">;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>So, it's a drawing so right away, let's add in Canvas import and the call to complete at the end, and a comment to explain what the program does.</explanation>
+</step>
+<step num = "3">
+<explanation>We're being asked to draw 10 line segments.  Once again, this looks pretty repetitive!  It's a line, 10 times.  Yes, different lines, but still a line, each time.  
+
+In the clock face example, we used a stepper variable going up by 1 each time to control the loop.  In the horizontal lines example, we used a characteristic of the lines, the y-value of the start/end of the line, to control the loop.
+
+This time, is there some characteristic of the 10 lines we can use?  Or do we need a simple counting variable, counting from 1 to 10?</explanation>
+</step>
+<step num = "4">
+<change num = "1">
+<docname>RandomLineDocument</docname>
+<operation>Ask Answer</operation>
+<question num = "4" content="To control the number of repeats (e.g. the number of lines we draw), can we use some characteristic of the lines themselves, as we did before, or do we need a simple counting variable?" type="MULTI_CHOICE">
+<option num ="0"  content="Use some characteristic of the lines themselves"></option>
+<option num ="1"  content="Use a simple counting variable"></option>
+<option num ="2"  content="Something else"></option>
+<option num ="3"  content="I don't understand the question"></option>
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "5">
+<explanation>We asked whether we could use a characteristic of the lines as a variable to control the repetition, or whether we needed a simple counting variable.
+
+Well - the details of the lines are going to be randomly generated, so there won't be the regular changing, or stepping, nature to the variables holding the start and end of the line.  Hence we need a simple counting variable this time.  What should this look like??</explanation>
+</step>
+<step num = "6">
+<change num = "1">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000005e">    lineCount += 1;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000052">while lineCount &lt; 10:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000051">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000004e">lineCount = 0;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000005f">;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Here it is... have I got it right...?</explanation>
+</step>
+<step num = "7">
+<change num = "1">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000050">startY = 100;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000004f">startX = 100;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Yes, it is ok!  
+
+Now, we're given the starting point of the first line segment, so let's add that in.</explanation>
+</step>
+<step num = "8">
+<explanation>Let's simply draw the first line.  Remember, we know the start point, but the direction and length of the line are generated randomly.    Can you remember how we generate random numbers?  We need two: newLength and newAngle, the first in the range 0-50, the second in the range 0-359.  What lines do we need, do you think?</explanation>
+</step>
+<step num = "9">
+<change num = "1">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000059">    create_line( startX, startY, endX, endY );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000056">    endX, endY = end_point( startX, startY, newLength, newAngle );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000055">    newAngle = randint( 0, 359 );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000054">    newLength = randint( 0, 50 );</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Here's all that we need to draw the first line.  Is this what you had?  Check it carefully against your solution.  Note the following:
+- the module import line for the random module
+- the two calls to the function randint, which returns a random number between the two supplied numbers, inclusive
+- the call to the end_point function, making use of the random numbers
+- the create_line call that makes use of all this</explanation>
+</step>
+<step num = "10">
+<explanation>If we ran the code right now, as it stands above, what would we see?</explanation>
+</step>
+<step num = "11">
+<change num = "1">
+<docname>RandomLineDocument</docname>
+<operation>Ask Answer</operation>
+<question num = "11" content="If we ran the code above, what would we see?" type="MULTI_CHOICE">
+<option num ="0"  content="A single line (all 10 lines drawn directly on top of each other)"></option>
+<option num ="1"  content="The segmented line that we want, with the 10 connected sections"></option>
+<option num ="2"  content="10 lines of different lengths, in a kind of star shape"></option>
+<option num ="3"  content="I don't know"></option>
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "12">
+<explanation>Question was what would we see if we ran the code as it stands, with options: one single line, the segmented line we want, or 10 lines of different lengths in a kind of star shape.
+
+It's the last one we see - the length and angle of the line are changing on each repeat, but the starting point isn't.  
+
+So what do we need to do to change this so that we get our segmented line?  How is each segment related to the next?
+</explanation>
+</step>
+<step num = "13">
+<change num = "1">
+<docname>RandomLineDocument</docname>
+<operation>Ask Answer</operation>
+<question num = "13" content="So how do we get the segmented line we want?" type="MULTI_CHOICE">
+<option num ="0"  content="Set the end point to be the start point"></option>
+<option num ="1"  content="Set the start point to be the end point"></option>
+<option num ="2"  content="Create a new random start point each time"></option>
+<option num ="3"  content="I don't know"></option>
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "14">
+<change num = "1">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000005d">    startY = endY;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000005c">    startX = endX;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>We need to set the start point to be the current end point.  The relationship between the individual segments is that the end of one is the start of the next.  For the first line, we set the start point to be (100,100) as specified in the problem statement.  To get ready for each subsequent line, at the end of the loop, we need to reset the start variables for x and y to be the current end point values.  On the next loop around, we'll create new end point values, and we'll have saved the current ones to serve as the starting point - exactly what we want.</explanation>
+</step>
+<step num = "15">
+<explanation>This is looking good.  Just one thing that would improve it...</explanation>
+</step>
+<step num = "16">
+<change num = "1">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000005b">    # Now get ready for next line;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-00000000005a">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000058">    # and draw it;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000057">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000053">    # Generate the characteristics of the new line;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>RandomLineDocument</docname>
+<fragname id="00000000-0000-0000-0000-000000000051">;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Add a few comments and some spacing to clearly explain and show 'chunks' of activity.</explanation>
+</step>
+</process>
+<process name ="PasswordCheckerExample" app = "PasswordChecker" processID ="7d2904ce-5ecb-41bc-8a52-075ee319066b">
+<step num = "1">
+<change num = "1">
+<docname>passwordCheckerProblem</docname>
+<fragname id="df8d741e-0836-4207-b61d-db70af613f4d">Be sure to read what is in the bottom pane of the window on every step.;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>You should try to solve this problem yourself before reviewing this worked example.  The problem is shown on the next step - or look at the document on the Moodle site.
+
+When you do decide to look through this worked example, be sure to read what's written down here for each step - the wisdom, such as it is, is down here!  It is this way of thinking that you should be learning to adopt...
+
+Make sure this bottom pane is large enough to see all the text - or you can use the scroll bar on the right if needed (but take care not to miss text that is off the bottom of the window.)
+
+Also, ANSWER EACH QUESTION POSED IN A STEP, IN YOUR HEAD OR ON PAPER, BEFORE MOVING ON TO THE NEXT STEP.  This will radically improve your learning.
+
+So, remember the steps we disussed in the last lecture for solving these exam style problems:
+
+1.  Read the question very carefully, highlighting or noting down anything that stands out.
+2.  Look at any sample input and output, and make sure you understand how the output was derived from the input.
+3.  Develop a simple or high-level set of steps that will solve the problem - a top-level plan.
+</explanation>
+</step>
+<step num = "2">
+<change num = "1">
+<docname>passwordCheckerProblem</docname>
+<fragname id="ef4f4a13-dec3-4405-9505-f17a94ee246e">    aAaAaA          False;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerProblem</docname>
+<fragname id="80536748-f4c9-49d2-bbc1-8ace568778bb">    aaa4aaa         False;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>passwordCheckerProblem</docname>
+<fragname id="4dda133e-365e-42c3-912e-9aaefc986308">    aA4bc           False;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>passwordCheckerProblem</docname>
+<fragname id="64c810fb-de7f-4249-80af-84d2db905cf2">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>passwordCheckerProblem</docname>
+<fragname id="8b1b8242-1c34-47f1-81d5-4a490adbd909">The following are some sample passwords and the expected output from the checker function:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>passwordCheckerProblem</docname>
+<fragname id="e314aecb-6250-41cf-82de-dfeb6715277d">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>passwordCheckerProblem</docname>
+<fragname id="483fc110-6b31-46f5-97de-7679b124bc2c">    - Must contain at least one digit, one lower case letter and one upper case letter;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "8">
+<docname>passwordCheckerProblem</docname>
+<fragname id="2ec0e98e-3205-4268-a03a-627faa1b1a3d">    a4Abcd          True;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "9">
+<docname>passwordCheckerProblem</docname>
+<fragname id="e5d838ae-e262-4d7e-bc64-3ffe6f6b3cf5">    - Must have at least 6 characters;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "10">
+<docname>passwordCheckerProblem</docname>
+<fragname id="eb4dd807-96e7-438f-aa22-61ec7b00c86b">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "11">
+<docname>passwordCheckerProblem</docname>
+<fragname id="b575be7a-9897-4fcf-84cb-f46f85541929">.  The rules for a valid password are as follows:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "12">
+<docname>passwordCheckerProblem</docname>
+<fragname id="4212c9d4-83b0-41cc-b391-84620897ddbb">return True or False depending on whether the password is well-formed or not, respectively</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "13">
+<docname>passwordCheckerProblem</docname>
+<fragname id="08ea462d-677b-457d-bdc7-389b55dac287">, and </fragname>
+<operation>Insert</operation>
+</change>
+<change num = "14">
+<docname>passwordCheckerProblem</docname>
+<fragname id="dd97e3d5-bd80-456f-85c4-390807d776c0">take as parameter the password as a string</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "15">
+<docname>passwordCheckerProblem</docname>
+<fragname id="3bbcb38e-51c7-4a24-bb7c-2745869c29a8">to check whether a password conforms to a set of rules ? as might be used when you register with a website.  The function should </fragname>
+<operation>Insert</operation>
+</change>
+<change num = "16">
+<docname>passwordCheckerProblem</docname>
+<fragname id="a1af0502-fe09-4477-b1d6-f68a39549090">Write a function </fragname>
+<operation>Insert</operation>
+</change>
+<change num = "17">
+<docname>passwordCheckerProblem</docname>
+<fragname id="df8d741e-0836-4207-b61d-db70af613f4d">Be sure to read what is in the bottom pane of the window on every step.;</fragname>
+<operation>Delete</operation>
+</change>
+<explanation>So - here is the problem, as you might have in an exam.
+
+Read the question carefully.  What to highlight...?
+</explanation>
+</step>
+<step num = "3">
+<change num = "1">
+<docname>passwordCheckerProblem</docname>
+<fragname id="a1af0502-fe09-4477-b1d6-f68a39549090">Write a function </fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>We need a function - by comparison with a whole program.  We need just a function.
+
+Anything else?</explanation>
+</step>
+<step num = "4">
+<change num = "1">
+<docname>passwordCheckerProblem</docname>
+<fragname id="dd97e3d5-bd80-456f-85c4-390807d776c0">take as parameter the password as a string</fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>- it takes a parameter
+And...?
+</explanation>
+</step>
+<step num = "5">
+<change num = "1">
+<docname>passwordCheckerProblem</docname>
+<fragname id="4212c9d4-83b0-41cc-b391-84620897ddbb">return True or False depending on whether the password is well-formed or not, respectively</fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>- it returns a value - True or False</explanation>
+</step>
+<step num = "6">
+<explanation>The True or False depends on some rules.  Take care on your intuition - what precisely are the rules, rather than what you expect them to be from your everyday experience of password rules?  In this case, upper and lowercase and digits are expected, but it says nothing about non-alphanumeric characters, which are often part of typical password rules.
+
+What are the rules, exactly?
+</explanation>
+</step>
+<step num = "7">
+<change num = "1">
+<docname>passwordCheckerProblem</docname>
+<fragname id="e5d838ae-e262-4d7e-bc64-3ffe6f6b3cf5">    - Must have at least 6 characters;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerProblem</docname>
+<fragname id="483fc110-6b31-46f5-97de-7679b124bc2c">    - Must contain at least one digit, one lower case letter and one upper case letter;</fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>Ok...
+
+1.  Must be at least 6 characters long
+2.  Must have at least one digit
+3.  Must have at least one lowercase letter
+4.  Must have at least one uppercase letter
+</explanation>
+</step>
+<step num = "8">
+<change num = "1">
+<docname>passwordCheckerProblem</docname>
+<fragname id="ef4f4a13-dec3-4405-9505-f17a94ee246e">    aAaAaA          False;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerProblem</docname>
+<fragname id="80536748-f4c9-49d2-bbc1-8ace568778bb">    aaa4aaa         False;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>passwordCheckerProblem</docname>
+<fragname id="2ec0e98e-3205-4268-a03a-627faa1b1a3d">    a4Abcd          True;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "4">
+<docname>passwordCheckerProblem</docname>
+<fragname id="4dda133e-365e-42c3-912e-9aaefc986308">    aA4bc           False;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "5">
+<docname>passwordCheckerProblem</docname>
+<fragname id="483fc110-6b31-46f5-97de-7679b124bc2c">    - Must contain at least one digit, one lower case letter and one upper case letter;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "6">
+<docname>passwordCheckerProblem</docname>
+<fragname id="e5d838ae-e262-4d7e-bc64-3ffe6f6b3cf5">    - Must have at least 6 characters;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "7">
+<docname>passwordCheckerProblem</docname>
+<fragname id="4212c9d4-83b0-41cc-b391-84620897ddbb">return True or False depending on whether the password is well-formed or not, respectively</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "8">
+<docname>passwordCheckerProblem</docname>
+<fragname id="a1af0502-fe09-4477-b1d6-f68a39549090">Write a function </fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "9">
+<docname>passwordCheckerProblem</docname>
+<fragname id="dd97e3d5-bd80-456f-85c4-390807d776c0">take as parameter the password as a string</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>Ok, so we've got the basic idea now:
+
+- a function, taking a password as a string, and processing the string according to a set of rules to return either True or False.
+
+Let's consider the processing bit thoroughly.
+
+First, as indicated earlier, check the sample input and output, ensuring you know how the latter was derived from the former.  In the case of a function, the input is argument values supplied on a call to the function, and the output is the value returned by the function, if any.  In this case:
+
+- The first sample password results in False being returned because although it has digits, upper and lower case, it is not long enough.
+- The second one is long enough (just), and has an upper case letter, lower case letters and a digit, and so is the result is True, as those are all the requirements.
+- The third is False as it has no upper case letter.
+- The fourth is also False as it has no digit.
+</explanation>
+</step>
+<step num = "9">
+<change num = "1">
+<docname>passwordCheckerProblem</docname>
+<fragname id="4dda133e-365e-42c3-912e-9aaefc986308">    aA4bc           False;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerProblem</docname>
+<fragname id="2ec0e98e-3205-4268-a03a-627faa1b1a3d">    a4Abcd          True;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "3">
+<docname>passwordCheckerProblem</docname>
+<fragname id="80536748-f4c9-49d2-bbc1-8ace568778bb">    aaa4aaa         False;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "4">
+<docname>passwordCheckerProblem</docname>
+<fragname id="ef4f4a13-dec3-4405-9505-f17a94ee246e">    aAaAaA          False;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>Brainstorming.  Do we know how to write code to determine each of the following?  Have we done something a bit like each of these before?
+
+- Is the password the right length?
+- Does it contain at least one capital letter?
+- Does it contain at least one small letter?
+- Does it contain at least one digit?
+
+What is your answer to each of these ? how would we do it?
+</explanation>
+</step>
+<step num = "10">
+<explanation>Is the password the right length?  
+
+We have done stuff like this before:  We can find the length of a string using the len function, and then use a comparison operator (e.g. &gt; &lt; etc.) to test the length.</explanation>
+</step>
+<step num = "11">
+<explanation>We can scan over (or traverse) the characters in a string - with a for loop.  Then we can test each character as required, to see if it's upper case, lower case or a digit.  
+
+We can use **one-way flag** variables here.  Can you remember what these are?  How would we use them here?</explanation>
+</step>
+<step num = "12">
+<explanation>&quot;One-way flag&quot; is a way of using a variable - a variable role.  
+
+We use a one-way flag when we are looking for a particular condition through repeated testing.  We start off by assuming the condition is not met, e.g. is False, and create a variable with False as the initial value; we then enter a loop that does a test for the condition each time around the loop.  If the condition is found to be true on any one time around the loop, the variable is set to True.  The way the code is written means that it can never be set back to False - a one-way flag.
+
+So - here - before we start checking the password string, we assume it contains no capital letters, and set a one-way flag variable (we could call it &quot;seenCapital&quot;) to False, to indicate we haven't seen one yet.
+If we ever then see a capital letter, we set the flag variable to True.  Whatever is in seenCapital at the end of checking the password characters represents whether the password contains a capital letter or not.
+
+Can you see how to check for lowercase letters and digits now?
+</explanation>
+</step>
+<step num = "13">
+<explanation>You just use the same technique for those two as you did for the capital letter.  Easy.
+
+So, you can test for all of these conditions - and once you have scanned over the whole password, you should have three Boolean values for upper and lower case and digits, and also another to indicate whether the length is ok, True or False for each of the conditions, so you simply need to combine them.
+</explanation>
+</step>
+<step num = "14">
+<explanation>So, to recap, we know we need a function returning a Boolean value, we have spent some time reflecting on whether we know how to take the password value and test it to see if we should return True or False, all before writing any code.  
+
+It is all similar, though not identical, to things we have seen before.  Try to break down and remember all the little pieces you have used before - this should help you to match up a new problem to what you know how to do already.
+
+Some folk are a bit confused by functions in Python.  But they are really no different from methods/functions in Alice.  There, you chose a name, you added parameters (name and type) if necessary, and if writing an Alice function, you specified a return type and then value.  Python is just the same - you write down a name, and you give parameter names (types aren't needed in Python), and you include a 'return' line in the function body if you want to return a value.
+
+Let us code this up now...
+</explanation>
+</step>
+<step num = "15">
+<explanation>Do we need to import any modules?</explanation>
+</step>
+<step num = "16">
+<change num = "1">
+<docname>passwordCheckerCode</docname>
+<fragname id="10bedb8f-ed4b-4beb-a0d0-575ca0913e7f">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerCode</docname>
+<fragname id="c9c60dc4-6b83-4169-ba05-96e0cb40f019">from string import *;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>passwordCheckerCode</docname>
+<fragname id="4bd30e2f-632e-4f28-b0a8-400a132637a7">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>passwordCheckerCode</docname>
+<fragname id="54ad033b-f258-44de-a0bf-a3dc0e0946c9"># Quintin;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>passwordCheckerCode</docname>
+<fragname id="d54ce2ac-1147-41e6-806d-00a0a8207fe0">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>passwordCheckerCode</docname>
+<fragname id="db82dea9-c878-47e5-b021-95844a059365"># a digit, a lowercase letter and an uppercase letter.;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>passwordCheckerCode</docname>
+<fragname id="c90c1f82-72a3-4057-ae96-47c4fd291c73"># contains at least 6 characters with at least one of each of;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "8">
+<docname>passwordCheckerCode</docname>
+<fragname id="fa744140-0cc9-4a16-82d8-4b687ddaad31"># Function to check if a password is well-formed, that is;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Yes, the string module, so that we can access the uppercase, lowercase and digits values in our tests.
+
+Add a comment explaining the program too.
+
+How does the function header look?
+</explanation>
+</step>
+<step num = "17">
+<change num = "1">
+<docname>passwordCheckerCode</docname>
+<fragname id="9d55155c-7a13-4dfd-aee0-809bd79abda2">    return ???;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerCode</docname>
+<fragname id="1f95ea6c-3f8a-44ae-a9c1-a3c605f2ca40">def checkPassword( password ):;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Easy.  Use a sensible name for the function, and meaningful names for the parameters.
+
+Worth adding in the return statement now, just so you don't forget it.  If you're writing on paper, then obviously do this some way down the page!</explanation>
+</step>
+<step num = "18">
+<change num = "1">
+<docname>passwordCheckerCode</docname>
+<fragname id="a969e7ab-669c-4104-8087-2d471d66b571">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerCode</docname>
+<fragname id="f3b2bfab-23c6-445c-ab7f-3ea64bddce87">    # Combine our analysis into a single boolean value and return it;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>passwordCheckerCode</docname>
+<fragname id="0c798b06-9aec-45f4-b404-8865bd7ddc58">    # Check each character in turn in the password;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>passwordCheckerCode</docname>
+<fragname id="7d90fa78-0e7a-4141-817b-dfbd955c7356">    ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>passwordCheckerCode</docname>
+<fragname id="034abfa6-cbf0-4608-84c1-82c66a482c81">    # Check if the length is ok;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Now, put in some comments explaining the rough structure of what we are going to do:</explanation>
+</step>
+<step num = "19">
+<change num = "1">
+<docname>passwordCheckerCode</docname>
+<fragname id="1273e89b-4d13-46d9-8385-7b29d88639f0">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerCode</docname>
+<fragname id="10bedb8f-ed4b-4beb-a0d0-575ca0913e7f">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>passwordCheckerCode</docname>
+<fragname id="7f3a1d9f-743e-4b27-84db-66f7884deb7d">minLength = 6;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>passwordCheckerCode</docname>
+<fragname id="34f13d9e-2d18-4132-a9d3-ab9d9e4239d6">        lengthOK = False;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>passwordCheckerCode</docname>
+<fragname id="757a02ad-ad3c-4d02-9c6e-770ab3eb8eb6">    else:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>passwordCheckerCode</docname>
+<fragname id="4656298b-0b54-48a4-8427-e4fc5be0747a">        lengthOK = True;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>passwordCheckerCode</docname>
+<fragname id="0caf0abd-790d-4528-a7f0-70b3698e8789">    if len( password ) &gt;= minLength:;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Here is one way you might consider testing and remembering whether the length of the password is ok.  Does it look ok to you?
+
+Note we've used a &quot;minLength&quot; variable to represent the minimum allowable length of a password.  While we know that the value for this is 6, and we could just write 6 in the test, it is better to give such so-called &quot;naked&quot; values a name - it helps the readability of the code.  If the name does not fully describe the purpose of the value, then a comment could be added on the line the name is created.</explanation>
+</step>
+<step num = "20">
+<explanation>It is ok - but it is not the best way.  It is hard to explain why, so you may need to read this bit a few times.
+
+The test in this if statement - len(password) &gt;= minLength - must evaluate to one of the values True or False.  The if statement says that if it evaluates to True, then the variable lengthOK should be set to True.  The if statement also says that if the test evaluates to False, then the same variable lengthOK should be set to False.
+
+Note that again - if the test evaluates to True, the variable is set to True; if the test evaluates to False, the variable is set to False.
+
+Here is the realization: we can simply set the variable to be the result of evaluating the test.  See how on the next step.
+</explanation>
+</step>
+<step num = "21">
+<change num = "1">
+<docname>passwordCheckerCode</docname>
+<fragname id="9eabf1fe-2980-4285-8f9f-07959c186278"># Test on whether length is ok;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerCode</docname>
+<fragname id="911453ff-d5b5-4794-b5a0-a563cd4caefb">    lengthOK = len( password) &gt;= minLength   </fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>passwordCheckerCode</docname>
+<fragname id="34f13d9e-2d18-4132-a9d3-ab9d9e4239d6">        lengthOK = False;</fragname>
+<operation>Delete</operation>
+</change>
+<change num = "4">
+<docname>passwordCheckerCode</docname>
+<fragname id="757a02ad-ad3c-4d02-9c6e-770ab3eb8eb6">    else:;</fragname>
+<operation>Delete</operation>
+</change>
+<change num = "5">
+<docname>passwordCheckerCode</docname>
+<fragname id="4656298b-0b54-48a4-8427-e4fc5be0747a">        lengthOK = True;</fragname>
+<operation>Delete</operation>
+</change>
+<change num = "6">
+<docname>passwordCheckerCode</docname>
+<fragname id="034abfa6-cbf0-4608-84c1-82c66a482c81">    # Check if the length is ok;</fragname>
+<operation>Delete</operation>
+</change>
+<change num = "7">
+<docname>passwordCheckerCode</docname>
+<fragname id="0caf0abd-790d-4528-a7f0-70b3698e8789">    if len( password ) &gt;= minLength:;</fragname>
+<operation>Delete</operation>
+</change>
+<explanation>It is much neater this way - but may take a bit of getting used to.  Flick back and forward if you are not sure, looking at the old version and this one, until you can convince yourself that they are the same.</explanation>
+</step>
+<step num = "22">
+<explanation>Now to check for the three other conditions.  As we discussed earlier, these all require looping over each character in the password, performing the necessary tests and recording the result if necessary using one-way flag variables.
+
+What would be good names for the three variables?
+</explanation>
+</step>
+<step num = "23">
+<change num = "1">
+<docname>passwordCheckerCode</docname>
+<fragname id="b0d684ac-514f-4a0d-981c-e28577fa2c4c">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerCode</docname>
+<fragname id="fd0ccb1e-fa4d-4be3-90d8-72d5ede408a4"># ... same for digits;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>passwordCheckerCode</docname>
+<fragname id="94f1a8e1-4503-416a-8cc5-3299bfa3fd7b">    hasDigit = False          </fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>passwordCheckerCode</docname>
+<fragname id="6f409e4f-0a74-42e3-a7f7-dcf81041e981"># ... same for uppercase letters;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>passwordCheckerCode</docname>
+<fragname id="4cf27d4b-a22e-4508-9598-0953a3c22f9e">    hasUpperLetter = False    </fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>passwordCheckerCode</docname>
+<fragname id="cdaa73e0-79f6-4177-aaa0-8ef72b131f7f"># Initially, assume no lowercase letters;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>passwordCheckerCode</docname>
+<fragname id="5d59fcde-09aa-4f87-beeb-013d0e1f4a13">    hasLowerLetter = False    </fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Here they are.  Each name is a bit like a statement.  hasLowerLetter is shorthand for recording &quot;I have seen a lower case letter&quot;.  Initially, of course, this is set to False.
+
+What should the loop header look like?
+</explanation>
+</step>
+<step num = "24">
+<change num = "1">
+<docname>passwordCheckerCode</docname>
+<fragname id="581553cf-31cc-45d2-b0df-e9051757fd2f">    for char in password:;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>This is a simple for loop over the items in the string.  We do not need to know about any indices, so we can use this simple form.
+
+And what should the test look like for a lower case letter, and what should we do if we find one?
+</explanation>
+</step>
+<step num = "25">
+<change num = "1">
+<docname>passwordCheckerCode</docname>
+<fragname id="4b274763-e1e2-4f83-939c-d0fc8d2e8268">            hasLowerLetter = True;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerCode</docname>
+<fragname id="d3e55f5a-8822-4b5b-9e7e-ea7c5f2970c3">        if char in lowercase:;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>We can use the lowercase value from the string module in our test, to make it simpler.  And if it turns out that the password letter we are currently looking at in the loop is a lower case letter, then we set the corresponding one-way flag to True.
+
+Be sure you understand how the whole check for a lower case letter works - how the one-way flag works.
+
+How would you now extend this for upper case and digits?
+</explanation>
+</step>
+<step num = "26">
+<change num = "1">
+<docname>passwordCheckerCode</docname>
+<fragname id="f1359f08-4c1c-4768-83b7-8b28cda3de18">            hasDigit = True;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerCode</docname>
+<fragname id="3789bdcd-139d-45fa-bf57-147ebf6f1a5e">        if char in digits:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>passwordCheckerCode</docname>
+<fragname id="2c6294f6-b87c-441e-bc14-ebf7ece21e79">            hasUpperLetter = True;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>passwordCheckerCode</docname>
+<fragname id="f164661c-40b8-43d4-9ad6-7900006a8309">        if char in uppercase:;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>This is perhaps the easiest / most obvious way.  Two repeats of the same structure.  And it will work fine.
+
+We did discuss this in the last lecture, though.  There is a slightly better way of representing this, that more closely matches the problem.  Can you remember from the lecture how you could structure this differently?
+</explanation>
+</step>
+<step num = "27">
+<change num = "1">
+<docname>passwordCheckerCode</docname>
+<fragname id="3789bdcd-139d-45fa-bf57-147ebf6f1a5e">        if char in digits:;</fragname>
+<operation>Delete</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerCode</docname>
+<fragname id="f164661c-40b8-43d4-9ad6-7900006a8309">        if char in uppercase:;</fragname>
+<operation>Delete</operation>
+</change>
+<change num = "3">
+<docname>passwordCheckerCode</docname>
+<fragname id="74f6faac-cf39-430a-9b96-57f4547ba5db">        elif char in digits:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>passwordCheckerCode</docname>
+<fragname id="b4b44464-56c7-4fa9-b366-bd42b0fba05b">        elif char in uppercase:;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>See how it has been rewritten?  Flick back and forward to see the difference.
+
+We can rewrite it this way because the value in the char variable can at most only satisfy ONE of the three tests, if any at all.  A single character cannot, for example, be both a lower case and an upper case letter, or any kind of letter and also a digit.  Hence, as soon as we discover that a character has satisfied one of the conditions, we can set the corresponding one-way flag and then immediately start on the next character in the password.
+</explanation>
+</step>
+<step num = "28">
+<explanation>Now to combine these.  Under what overall condition is the password we are checking a good one?</explanation>
+</step>
+<step num = "29">
+<explanation>It is a good password only when ALL of the conditions are True.  How should we combine our four Boolean variables then?</explanation>
+</step>
+<step num = "30">
+<change num = "1">
+<docname>passwordCheckerCode</docname>
+<fragname id="8fef0dae-fc6b-4ff4-8002-b72fabccbf88">    return result;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerCode</docname>
+<fragname id="9d55155c-7a13-4dfd-aee0-809bd79abda2">    return ???;</fragname>
+<operation>Delete</operation>
+</change>
+<change num = "3">
+<docname>passwordCheckerCode</docname>
+<fragname id="2d68099c-a92e-4728-99ec-bab0d50f4c02">    result = lengthOK and hasLowerLetter and hasUpperLetter and hasDigit;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>You may have considered writing something like:
+
+     if lengthOK and hasLowerLetter and hasUpperLetter and hasDigit:
+          return True
+     else:
+          return False
+
+Again, this would work - but just as in the length test above, using the same logic, it can be neater, as shown here.
+
+But the result variable is a little bit superfluous, and I'd prefer the next step's rewrite...</explanation>
+</step>
+<step num = "31">
+<change num = "1">
+<docname>passwordCheckerCode</docname>
+<fragname id="3c854404-dfdc-462a-8d79-b2fa2da7b10d">    return lengthOK and hasLowerLetter and hasUpperLetter and hasDigit;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>passwordCheckerCode</docname>
+<fragname id="2d68099c-a92e-4728-99ec-bab0d50f4c02">    result = lengthOK and hasLowerLetter and hasUpperLetter and hasDigit;</fragname>
+<operation>Delete</operation>
+</change>
+<change num = "3">
+<docname>passwordCheckerCode</docname>
+<fragname id="8fef0dae-fc6b-4ff4-8002-b72fabccbf88">    return result;</fragname>
+<operation>Delete</operation>
+</change>
+<explanation>And so, we are done.  Check over all the steps and made sure the reasoning all makes sense to you.  Wait a day and then solve it yourself, to see how much you have remembered.</explanation>
+</step>
+</process>
+<process name ="JustAMinuteExample" app = "JustAMinute" processID ="d6f78a08-f184-4ae4-be82-9b758f6c29f6">
+<step num = "1">
+<explanation>Solve this problem as far as you can first, before making use of this worked example.
+
+
+Remember the approach to this kind of problem as before:
+1.  Read the question very carefully, highlighting or noting down anything that stands out.
+2.  Look at any sample input and output, and make sure you understand how the output was derived from the input.
+3.  Develop a simple or high-level set of steps that will solve the problem - a top-level plan.
+</explanation>
+</step>
+<step num = "2">
+<change num = "1">
+<docname>JustAMinuteProblem</docname>
+<operation>Show all</operation>
+</change>
+<explanation>Reading the question thoroughly, what should you pay attention to?  
+
+Note in your head those parts, before going on to the next step.</explanation>
+</step>
+<step num = "3">
+<change num = "1">
+<docname>JustAMinuteProblem</docname>
+<fragname id="a91ba6ec-cdc4-45b7-ab92-2984163d825b">write a complete program </fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>This time, you are asked to write a complete program.
+
+As quite often happens, even though there is a lot of text to give you context, the program is actually quite simple? what are you asked to do?
+</explanation>
+</step>
+<step num = "4">
+<change num = "1">
+<docname>JustAMinuteProblem</docname>
+<fragname id="92918989-f06b-459a-8c77-d09d047ec9fe">writing out any words that appear more than once in the text.;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>JustAMinuteProblem</docname>
+<fragname id="ba8449d6-081f-4bc6-80f1-61d0c789287d">reads in a single line of text from the user</fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>That's it - read in a single line of text, and find and write out all the words that appear more than once in the text.
+Is there anything else important?
+</explanation>
+</step>
+<step num = "5">
+<change num = "1">
+<docname>JustAMinuteProblem</docname>
+<fragname id="957ba26f-60b0-4f54-bc64-8cc892656b1a">Note that the order in which the words appear in the output is not important and that upper and lower case are treated the same - see how 'The' and 'the' are treated the same in the example above.;</fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>The final sentence should be noted.  The words in the output may appear in any order.  And also, the difference between upper and lower case should be ignored.</explanation>
+</step>
+<step num = "6">
+<change num = "1">
+<docname>JustAMinuteProblem</docname>
+<fragname id="e8846dc1-ff20-4562-a5ec-953bb8adef78">the 7;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>JustAMinuteProblem</docname>
+<fragname id="3db23e68-d9c4-4eee-89a0-34329090d426">of 5;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>JustAMinuteProblem</docname>
+<fragname id="64777699-1e30-4c7a-88c8-91cd07a4aac0">march 3;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "4">
+<docname>JustAMinuteProblem</docname>
+<fragname id="0b91ad00-3864-43fc-b871-ee2cea6a7b6f">ides 2;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "5">
+<docname>JustAMinuteProblem</docname>
+<fragname id="9cdd113f-3fed-46f0-bafd-ffda5c6a85e1">as 2;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "6">
+<docname>JustAMinuteProblem</docname>
+<fragname id="7862fbc6-6a32-4fa3-b6e0-b79c63b52cd4">known 2;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "7">
+<docname>JustAMinuteProblem</docname>
+<fragname id="db1449fc-475c-4fbb-bf06-ac423816cc61">The Ides of March are well known historically as the date on which Julius Caesar was assassinated by Brutus and others.  To be precise, the day of the year in question is the 15th of March.  JC should have known better as Shakespeare?s soothsayer apparently warned him of the danger, saying Beware the Ides of March.;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "8">
+<docname>JustAMinuteProblem</docname>
+<fragname id="92918989-f06b-459a-8c77-d09d047ec9fe">writing out any words that appear more than once in the text.;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "9">
+<docname>JustAMinuteProblem</docname>
+<fragname id="ba8449d6-081f-4bc6-80f1-61d0c789287d">reads in a single line of text from the user</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "10">
+<docname>JustAMinuteProblem</docname>
+<fragname id="a91ba6ec-cdc4-45b7-ab92-2984163d825b">write a complete program </fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "11">
+<docname>JustAMinuteProblem</docname>
+<fragname id="957ba26f-60b0-4f54-bc64-8cc892656b1a">Note that the order in which the words appear in the output is not important and that upper and lower case are treated the same - see how 'The' and 'the' are treated the same in the example above.;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>You can examine the sample input and output of the program to see all this in action.  The words appear in no particular order.  To get a count of 7 &quot;the&quot;s, you need to include the first one with the capital T.
+
+Note also that punctuation is being ignored.  March appears with both a full stop and no full stop after it - all occurrences are counted in the total of 3.
+</explanation>
+</step>
+<step num = "7">
+<change num = "1">
+<docname>JustAMinuteProblem</docname>
+<fragname id="db1449fc-475c-4fbb-bf06-ac423816cc61">The Ides of March are well known historically as the date on which Julius Caesar was assassinated by Brutus and others.  To be precise, the day of the year in question is the 15th of March.  JC should have known better as Shakespeare?s soothsayer apparently warned him of the danger, saying Beware the Ides of March.;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "2">
+<docname>JustAMinuteProblem</docname>
+<fragname id="e8846dc1-ff20-4562-a5ec-953bb8adef78">the 7;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "3">
+<docname>JustAMinuteProblem</docname>
+<fragname id="3db23e68-d9c4-4eee-89a0-34329090d426">of 5;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "4">
+<docname>JustAMinuteProblem</docname>
+<fragname id="64777699-1e30-4c7a-88c8-91cd07a4aac0">march 3;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "5">
+<docname>JustAMinuteProblem</docname>
+<fragname id="0b91ad00-3864-43fc-b871-ee2cea6a7b6f">ides 2;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "6">
+<docname>JustAMinuteProblem</docname>
+<fragname id="9cdd113f-3fed-46f0-bafd-ffda5c6a85e1">as 2;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "7">
+<docname>JustAMinuteProblem</docname>
+<fragname id="7862fbc6-6a32-4fa3-b6e0-b79c63b52cd4">known 2;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>Take a moment now to jot down the actions that you will need to perform in order to produce this list.
+
+As you do so, consider whether any of this is like other problems you've solved.
+</explanation>
+</step>
+<step num = "8">
+<explanation>Well, you are working with words - that is like the indexer in the lab exam - splitting the text into a list of words will be useful.  You are to ignore upper and lower case - that is also like both the lab exam and the palindromes exercise, where you used the lower or upper function to convert the text into all the same case.  Punctuation is being ignored too - you could just remove it.
+
+You are counting occurrences of words.  This is similar, but not identical, to creating the index from the lab exam.  A good solution there was to use a dictionary.
+
+So to the program...
+</explanation>
+</step>
+<step num = "9">
+<change num = "1">
+<docname>JustAMinuteCode</docname>
+<fragname id="36248888-6653-4836-8f2b-16a7603738c8">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>JustAMinuteCode</docname>
+<fragname id="ebd507fc-d355-4da4-9c5d-d75008e72793"># Quintin;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>JustAMinuteCode</docname>
+<fragname id="6699d052-d528-400b-8659-a2d63f3267d8">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>JustAMinuteCode</docname>
+<fragname id="aa421fb2-d55a-438e-a97f-b9c1282b063c"># Checks for repeated words in a sentence;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>JustAMinuteCode</docname>
+<fragname id="bc4e37c7-e72e-4054-90de-eb8d7ca7d664"># Checker suitable for a game such as Just a Minute;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Put in a comment at the start.
+
+Are we going to need to import anything from a module?
+</explanation>
+</step>
+<step num = "10">
+<change num = "1">
+<docname>JustAMinuteCode</docname>
+<fragname id="967be561-82c5-4e7e-b764-3feebc7a4ed2">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>JustAMinuteCode</docname>
+<fragname id="eeacb02d-45e3-4104-a58d-c90475728255">from string import *;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Yes, again, we need to import the string module.</explanation>
+</step>
+<step num = "11">
+<change num = "1">
+<docname>JustAMinuteCode</docname>
+<fragname id="1538e203-dfe1-46fc-a660-fa478cdcf37c"># Now print out the results;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>JustAMinuteCode</docname>
+<fragname id="49ee0209-7e1f-440f-8a31-842883a6a341">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>JustAMinuteCode</docname>
+<fragname id="50413c99-8ead-4c5a-b527-00883e483044"># Scan over the word list, keeping a count of each word seen;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>JustAMinuteCode</docname>
+<fragname id="6de81795-5d38-4346-a0d1-1f5a563e9baa">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>JustAMinuteCode</docname>
+<fragname id="db1883eb-3acd-4b07-b957-018249d0deca"># Turn the raw text into a list of words;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>JustAMinuteCode</docname>
+<fragname id="7027d6ca-4ab3-473c-bf17-b7259e98b4c8">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>JustAMinuteCode</docname>
+<fragname id="84129754-ae3c-4563-9ab0-367d1fe6b3f4">text = raw_input( &quot;Please enter the text to be checked: &quot; );</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>As before, put in the major steps as comments.  If writing on paper, you can still do this, to show you have in your mind a broad structure for your solution -  just make sure you leave a good chunk of space between each comment for the code!
+
+See how this particular problem is a sequence - read in the text, process it to get a list of words, process the words to get counts, and then output the results.
+
+Now.  What steps do you need to follow to get a clean list of words?
+</explanation>
+</step>
+<step num = "12">
+<change num = "1">
+<docname>JustAMinuteCode</docname>
+<fragname id="009052d4-ce74-451b-8fff-727ff7140784">words = split( textNoPunctuation );</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>JustAMinuteCode</docname>
+<fragname id="ba2c8f3c-6e7e-4824-975a-c7e75df54c54">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>JustAMinuteCode</docname>
+<fragname id="ce4e1218-d095-400d-9457-2d95662f50af">        textNoPunctuation = textNoPunctuation + char;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>JustAMinuteCode</docname>
+<fragname id="91b0eed7-9b46-4850-b46c-239d9408354b">    if char not in punctuation:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>JustAMinuteCode</docname>
+<fragname id="33f26e8c-6519-4019-98bb-83dc62daa6b5">for char in text:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>JustAMinuteCode</docname>
+<fragname id="d48a8cd9-3136-4cee-b8a0-603654009834">textNoPunctuation = &quot;&quot;;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "7">
+<docname>JustAMinuteCode</docname>
+<fragname id="80a39fb8-9f65-4ad6-a4b1-2af8e722e0ed">text = lower( text );</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Ok, you've done it all before, you could do it with your eyes shut.  Yes, convert to lower case, remove the punctuation, and split the resulting string into a list of words.
+
+What about the word counting?
+</explanation>
+</step>
+<step num = "13">
+<change num = "1">
+<docname>JustAMinuteCode</docname>
+<fragname id="82d5bebf-a6ab-485a-8497-baf412fb083c">        wordCounts[ word ] = wordCounts[ word ] + 1;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>JustAMinuteCode</docname>
+<fragname id="52989258-b1b3-493d-a614-e4a605ed7288">for word in words:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>JustAMinuteCode</docname>
+<fragname id="a126dd90-d9d8-49ae-802a-eabfcfe79294">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>JustAMinuteCode</docname>
+<fragname id="85c5eb5f-1a23-4b0c-b251-5fe20d232516">          # Use a dictionary to keep the word counts;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>JustAMinuteCode</docname>
+<fragname id="aba86bd6-dcfa-4dcc-befe-5ca643d87913">wordCounts = {}</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>So we are going to use a dictionary.  Each word that we find in the text will get an entry in the dictionary, along with a count of how many times we have seen that word.
+
+Would this code do?  Check it out carefully?
+</explanation>
+</step>
+<step num = "14">
+<explanation>It is close - but what would happen if we had not seen a word before?</explanation>
+</step>
+<step num = "15">
+<change num = "1">
+<docname>JustAMinuteCode</docname>
+<fragname id="82d5bebf-a6ab-485a-8497-baf412fb083c">        wordCounts[ word ] = wordCounts[ word ] + 1;</fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>Yes indeed - we would get an error - because evaluating the expression on the right hand side of the = would fail, as there would be no entry yet for the word we are currently working with.
+
+How should we extend this then?
+</explanation>
+</step>
+<step num = "16">
+<change num = "1">
+<docname>JustAMinuteCode</docname>
+<fragname id="82d5bebf-a6ab-485a-8497-baf412fb083c">        wordCounts[ word ] = wordCounts[ word ] + 1;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "2">
+<docname>JustAMinuteCode</docname>
+<fragname id="d5b3629d-a7fe-45e2-bb76-e0dd6e713bc7">    else:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>JustAMinuteCode</docname>
+<fragname id="1158f88e-3568-4106-90cd-7ea80d8485dc">    if word in wordCounts:;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>We just need to allow for the case of not having seen the word yet - we need to update the dictionary in different ways depending on whether we have or have not seen the word before.  And, if we have seen the word before, then there will be an entry already in the dictionary ? hence the test shown.
+
+What should go in the else branch?
+</explanation>
+</step>
+<step num = "17">
+<change num = "1">
+<docname>JustAMinuteCode</docname>
+<fragname id="0cd4ab6e-9ae6-4042-82d1-ff4f850472b4">    # Create a new entry for this word, not seen before;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>JustAMinuteCode</docname>
+<fragname id="bc41cc6b-7836-4df6-8228-aef928850e7b">        wordCounts[ word ] = 1</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>That's it - just creating a new entry for this word.</explanation>
+</step>
+<step num = "18">
+<change num = "1">
+<docname>JustAMinuteCode</docname>
+<fragname id="d34dd60f-b655-41ce-9f1e-e0e060f74646">    print word, wordCounts[ word ];</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>JustAMinuteCode</docname>
+<fragname id="6eb19e36-a30f-4acb-8f3b-5e67f79f5290">for word in wordCounts:;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Now we just need to write out the words.
+
+This code should do it.  Check it over to make sure it makes sense.
+</explanation>
+</step>
+<step num = "19">
+<explanation>Hang on - what were we asked to write out?  This writes out all the words - is that what we were asked for?
+
+Easy mistake to make here - just not quite reading the question closely enough, or forgetting at the last what was asked.  We should only write out words that appear more than once.
+
+What should we add or change then?
+</explanation>
+</step>
+<step num = "20">
+<change num = "1">
+<docname>JustAMinuteCode</docname>
+<fragname id="547a3d8f-7017-4c29-8dfd-cb611b6646c7">        print word, count;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>JustAMinuteCode</docname>
+<fragname id="fdc29718-d8f4-4687-be55-cdf39da3864d">                # Only write out words seen more than once;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>JustAMinuteCode</docname>
+<fragname id="191aa7ce-ae2e-4afb-bf0e-f4885d745670">    if count &gt; 1:</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>JustAMinuteCode</docname>
+<fragname id="353a564c-c0ba-4e58-9338-f694b684ce3b">    count = wordCounts[ word ];</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>JustAMinuteCode</docname>
+<fragname id="d34dd60f-b655-41ce-9f1e-e0e060f74646">    print word, wordCounts[ word ];</fragname>
+<operation>Delete</operation>
+</change>
+<explanation>That is better.
+
+Again, wait a while and then solve this problem from scratch, without the help of this worked example.
+</explanation>
+</step>
+</process>
+<process name ="FindErrorsExample" app = "FindErrors" processID ="8f5938db-cc89-43ea-a306-72701717b391">
+<step num = "1">
+<explanation>In this example, we are going to review a typical style of programming exam question.  this is the &quot;Find errors in this code&quot; question.
+
+You are given a small fragment of code that is designed to solve a particular problem.  A rough explanation of how the code is intended to solve the problem is usually given, or else you are expected from earlier work to know the algorithm.  You are told that there are a certain number of errors in the code, say 3 or 4, and you have to find them, explain why there is a problem, and how to fix the problem.</explanation>
+</step>
+<step num = "2">
+<change num = "1">
+<docname>FindErrorsProblem</docname>
+<operation>Show all</operation>
+</change>
+<explanation>Here is the sample question.
+
+Before going any further, have a go at solving the problem yourself now.  Don't go on until you have spent a few minutes on it at least.</explanation>
+</step>
+<step num = "3">
+<explanation>How did you get on?  What strategies were you trying?  Did you find four errors?
+
+Even if you found four errors, read on.  We'll explore some strategies in the next few steps - these may match what you were doing, or you may realise there are some you didn't think of...</explanation>
+</step>
+<step num = "4">
+<change num = "1">
+<docname>FindErrorsStrategies</docname>
+<operation>Show all</operation>
+</change>
+<explanation>Here are the strategies that we think are worth trying.
+
+Before we work through each one, take some time now to do so yourself without any further explanation.  Take your time. Do this now, before reading on. 
+
+Do they help?  Whether they do or not, read on to see one way of applying them...</explanation>
+</step>
+<step num = "5">
+<change num = "1">
+<docname>FindErrorsStrategies</docname>
+<fragname id="524a54fb-3fd1-4ff4-81a0-574a6c01b97f">1.  Do your best to understand how the code is meant to be working.  This is usually explained to a greater or lesser extent in the problem itself.  As you do this, you may well encounter problems.  If not, then look at the rest of the points.;</fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>This is the most general strategy.  Basically, having read the problem description, you read through the code to see if it matches either the method described for solving the problem, or your own intuition on solving it.
+
+In this example, you have all written code to do this, so you have a good understanding of how it should work.  Even if the solution here isn't using the same mechanism you did in the lab exam, you are likely to be familiar enough with the problem to get an idea of how it is designed to work (even though it has errors).
+
+If you did find errors this way, good.  If you didn't, then each of the following strategies gives you a clearer focus on a particular possible source of errors to aim for.</explanation>
+</step>
+<step num = "6">
+<change num = "1">
+<docname>FindErrorsStrategies</docname>
+<fragname id="c9fe05c8-d9b8-47f0-b4ab-595b61fb367c">2.  Are all the variables initialised properly?  That is, is any variable used BEFORE it has first been given a value?;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsStrategies</docname>
+<fragname id="524a54fb-3fd1-4ff4-81a0-574a6c01b97f">1.  Do your best to understand how the code is meant to be working.  This is usually explained to a greater or lesser extent in the problem itself.  As you do this, you may well encounter problems.  If not, then look at the rest of the points.;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>This is a common source of errors.  We can look at each variable in turn and make sure it has been properly initialised - that is, given a first value...</explanation>
+</step>
+<step num = "7">
+<change num = "1">
+<docname>FindErrorsProblem</docname>
+<fragname id="3462831a-ce02-4d14-a408-6c5eab8e5d06">stop_word_list</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsProblem</docname>
+<fragname id="05ffb0a2-109e-463c-9700-907bcdcaddcb">stop_word_list </fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>Let's start with stop_word_list.
+
+It has been created and initialised at the start of the code, and crucially, before it can ever be accessed, since the only access is inside the function body itself.  So that's ok.</explanation>
+</step>
+<step num = "8">
+<change num = "1">
+<docname>FindErrorsProblem</docname>
+<fragname id="284e9c8e-0ecd-4a90-868f-8498c756f919">old_words</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsProblem</docname>
+<fragname id="cee2c68f-02d9-41a1-8e56-8e2b6bf85e3d">old_words</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>FindErrorsProblem</docname>
+<fragname id="05ffb0a2-109e-463c-9700-907bcdcaddcb">stop_word_list </fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "4">
+<docname>FindErrorsProblem</docname>
+<fragname id="3462831a-ce02-4d14-a408-6c5eab8e5d06">stop_word_list</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>old_words is a parameter.  A parameter is created and given a value at the start of a call of the function.  This means that any use of the parameter inside the function is guaranteed to be ok.  So old_words isn't a problem.</explanation>
+</step>
+<step num = "9">
+<change num = "1">
+<docname>FindErrorsProblem</docname>
+<fragname id="bf28b6a9-c4bd-428a-8c75-ac4bd418bce5">i</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsProblem</docname>
+<fragname id="81baff36-9a12-44f1-8d8a-0925a0d7cff2">i</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>FindErrorsProblem</docname>
+<fragname id="c948d703-f028-40a7-b107-8b78fd7f2dd1">i</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "4">
+<docname>FindErrorsProblem</docname>
+<fragname id="cee2c68f-02d9-41a1-8e56-8e2b6bf85e3d">old_words</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "5">
+<docname>FindErrorsProblem</docname>
+<fragname id="284e9c8e-0ecd-4a90-868f-8498c756f919">old_words</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>The variable i is known as a &quot;for loop variable&quot; and is created and assigned values by the for loop itself.  Any use of the variable inside the loop is going to be ok - so we don't need to worry about this one.</explanation>
+</step>
+<step num = "10">
+<change num = "1">
+<docname>FindErrorsProblem</docname>
+<fragname id="2194069b-1a6f-4e0d-adc8-2657e0edf58e">words</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsProblem</docname>
+<fragname id="c9096dfd-9ad5-4e70-98a8-f1f82ee4bc99">words</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>FindErrorsProblem</docname>
+<fragname id="47e3f720-176f-473c-8a3c-d2ee7f7bdb03">            words</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "4">
+<docname>FindErrorsProblem</docname>
+<fragname id="c948d703-f028-40a7-b107-8b78fd7f2dd1">i</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "5">
+<docname>FindErrorsProblem</docname>
+<fragname id="81baff36-9a12-44f1-8d8a-0925a0d7cff2">i</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "6">
+<docname>FindErrorsProblem</docname>
+<fragname id="bf28b6a9-c4bd-428a-8c75-ac4bd418bce5">i</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>Now what about words?  The first time, during execution, that this variable is accessed is on the right hand side of the assignment statement.  I know it's not written that way - the creation on the left hand side comes first - but during execution, Python will evaluate the right hand side first, before trying to store the resulting value into the words variable.  When Python tries to access the value in words, it will find that words hasn't yet been created.  So this is one of the errors.
+
+How should we write about this error?  We've been asked to identify the error and to suggest a solution.  Try writing this down precisely before moving on to the next step.</explanation>
+</step>
+<step num = "11">
+<change num = "1">
+<docname>FindErrorsAnswers</docname>
+<fragname id="bc18176c-cd07-4691-8215-a333149fe5de">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsAnswers</docname>
+<fragname id="e1855524-6213-4c39-ad7c-ac2413e9e282">    words = [];</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>FindErrorsAnswers</docname>
+<fragname id="458d5ef2-d634-4e2c-a0cc-8e7055a07d3d">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>FindErrorsAnswers</docname>
+<fragname id="b91c1334-a102-4562-82b7-5633de9ab760">1.  The variable words is not initialised.  It is a gatherer variable, and should be initialised to the empty list.  To fix it, between line 2 and 3, at one indentation level in, add ;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "5">
+<docname>FindErrorsAnswers</docname>
+<fragname id="3e757fa6-a75e-40b1-abee-6efc1fd43f3d">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "6">
+<docname>FindErrorsAnswers</docname>
+<fragname id="b24c5147-f718-4e94-b756-7bfcdc50d22f">The Errors;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>This explanation shows that you fully understand the error in the context of the problem, and how to fix it.  Note how the line numbers contained in the comments have been used so that it is obvious exactly where you want to add in an extra line.  Note also that the indentation level is given - an important aspect in Python.
+
+That's all the variables examined to ensure they've been created/initialised properly.  Let's move on to the next strategy.</explanation>
+</step>
+<step num = "12">
+<change num = "1">
+<docname>FindErrorsProblem</docname>
+<fragname id="284e9c8e-0ecd-4a90-868f-8498c756f919">old_words</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsProblem</docname>
+<fragname id="d4623a4b-be82-47f2-a106-ce8498d2b8f6"> in </fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>FindErrorsProblem</docname>
+<fragname id="c948d703-f028-40a7-b107-8b78fd7f2dd1">i</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "4">
+<docname>FindErrorsProblem</docname>
+<fragname id="a5254f2e-edb7-4351-b168-6c14343e9b5e">    for </fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "5">
+<docname>FindErrorsProblem</docname>
+<fragname id="2194069b-1a6f-4e0d-adc8-2657e0edf58e">words</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "6">
+<docname>FindErrorsProblem</docname>
+<fragname id="c9096dfd-9ad5-4e70-98a8-f1f82ee4bc99">words</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "7">
+<docname>FindErrorsProblem</docname>
+<fragname id="47e3f720-176f-473c-8a3c-d2ee7f7bdb03">            words</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "8">
+<docname>FindErrorsStrategies</docname>
+<fragname id="65f6ec75-2224-4cf2-955a-fddb927a1a5e">3.  In loops, check that the loop will &quot;go round&quot; the right number of times.  Take care to check on the initialisation, test for completion of the loop, and update, of any stepper/counter variable;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "9">
+<docname>FindErrorsStrategies</docname>
+<fragname id="c9fe05c8-d9b8-47f0-b4ab-595b61fb367c">2.  Are all the variables initialised properly?  That is, is any variable used BEFORE it has first been given a value?;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>In this example, we have just one loop, a for loop.  How many of the words in the list are we looking at?  How many of the words in the list **should** we be looking at?  
+
+ALL of them - we need to check every one to see if it's in the stopword list.
+
+And that is exactly what this loop is doing - traversing all the items in the list.
+
+So, no problem here.</explanation>
+</step>
+<step num = "13">
+<change num = "1">
+<docname>FindErrorsStrategies</docname>
+<fragname id="65f6ec75-2224-4cf2-955a-fddb927a1a5e">3.  In loops, check that the loop will &quot;go round&quot; the right number of times.  Take care to check on the initialisation, test for completion of the loop, and update, of any stepper/counter variable;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsStrategies</docname>
+<fragname id="aad5e936-76ad-45f1-9734-fdab176d156d">4.  Check tests in if statements and while loops.  Are you sure the test is the correct one?  Compound Boolean expressions, where you are using more than one ?and? or ?or? operator, can often be used incorrectly.;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>FindErrorsProblem</docname>
+<fragname id="3462831a-ce02-4d14-a408-6c5eab8e5d06">stop_word_list</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "4">
+<docname>FindErrorsProblem</docname>
+<fragname id="0e1b4c1a-ac77-41c6-ba13-d9175fcc8c72"> in </fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "5">
+<docname>FindErrorsProblem</docname>
+<fragname id="4fb5fa51-bd75-4b77-ae71-81c1fbb84ed0">        if </fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "6">
+<docname>FindErrorsProblem</docname>
+<fragname id="81baff36-9a12-44f1-8d8a-0925a0d7cff2">i</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "7">
+<docname>FindErrorsProblem</docname>
+<fragname id="284e9c8e-0ecd-4a90-868f-8498c756f919">old_words</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "8">
+<docname>FindErrorsProblem</docname>
+<fragname id="d4623a4b-be82-47f2-a106-ce8498d2b8f6"> in </fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "9">
+<docname>FindErrorsProblem</docname>
+<fragname id="c948d703-f028-40a7-b107-8b78fd7f2dd1">i</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "10">
+<docname>FindErrorsProblem</docname>
+<fragname id="a5254f2e-edb7-4351-b168-6c14343e9b5e">    for </fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>This is related to the previous strategy - in that it is getting you to check on any test/condition very carefully.  If you are using while loops, you have a condition in there, and you should check it very carefully, to see if it is controlling the loop properly.
+
+In this example, we don't have a while loop, but we do have an if statement with a condition in it.  Is this condition working as we would expect?  Look at it closely now, before moving on...</explanation>
+</step>
+<step num = "14">
+<explanation>Not sure?  Well, the condition is testing to see if the current word we're looking at (held in the i variable) is in the stopword list.  If it is, we go ahead and add it to the words list - the list that we eventually return.
+
+Is that ok?</explanation>
+</step>
+<step num = "15">
+<explanation>No - of course it's not.  We only want to add one of the words to the list we return if the word is NOT in the stopword list.
+
+So, in the next step, write down precisely how you would explain this error and how to solve it...</explanation>
+</step>
+<step num = "16">
+<change num = "1">
+<docname>FindErrorsStrategies</docname>
+<operation>Ask Answer</operation>
+<question num = "16" content="As an exercise, type in how you would explain this error and how to solve it.  You can move this window around, and scroll the panes in the main widnow if you need to." type="DESCRIPTIVE">
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "17">
+<change num = "1">
+<docname>FindErrorsAnswers</docname>
+<fragname id="e7800769-fb10-46b7-b9c3-49c107b6accd">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsAnswers</docname>
+<fragname id="9a05271d-e74e-4740-88ff-20b572581a25">    if i not in stop_word_list:;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>FindErrorsAnswers</docname>
+<fragname id="ddc47a91-58b3-4246-b733-eb18f71c7167">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "4">
+<docname>FindErrorsAnswers</docname>
+<fragname id="cb66ffea-f216-4899-ae82-05e397e51b52">2.  The test in the if statement in Line 4 is wrong.  We should be testing for whether the current word we?re looking at is NOT in the stopword list ? only then do we add it to our new list.  Change the line to:;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>How does your explanation match up to the one shown here?
+
+Note how the problem is clearly stated, and how it affects the operation of the function, and also how the code should be changed.
+
+There are no more tests, so we can move on to the next strategy.  Two down, two to go...</explanation>
+</step>
+<step num = "18">
+<change num = "1">
+<docname>FindErrorsStrategies</docname>
+<fragname id="aad5e936-76ad-45f1-9734-fdab176d156d">4.  Check tests in if statements and while loops.  Are you sure the test is the correct one?  Compound Boolean expressions, where you are using more than one ?and? or ?or? operator, can often be used incorrectly.;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsStrategies</docname>
+<fragname id="cd376025-8d81-47d3-9535-93c9b7afbe41">5.  In Python, indentation is important.  Is every statement at the correct indentation level?  It is easy to miss this, so look carefully.;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>FindErrorsProblem</docname>
+<fragname id="3462831a-ce02-4d14-a408-6c5eab8e5d06">stop_word_list</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "4">
+<docname>FindErrorsProblem</docname>
+<fragname id="0e1b4c1a-ac77-41c6-ba13-d9175fcc8c72"> in </fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "5">
+<docname>FindErrorsProblem</docname>
+<fragname id="81baff36-9a12-44f1-8d8a-0925a0d7cff2">i</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "6">
+<docname>FindErrorsProblem</docname>
+<fragname id="4fb5fa51-bd75-4b77-ae71-81c1fbb84ed0">        if </fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>Now we need to review each line of code in relation to its neighbours above and below, to determine whether it is in the right position - whether it is inside or outside a loop body, or an if branch, or else branch, or inside a function or outside it.  Indentation is so crucial in Python!
+
+Can you see any problems with indentation in this code?
+</explanation>
+</step>
+<step num = "19">
+<change num = "1">
+<docname>FindErrorsStrategies</docname>
+<operation>Ask Answer</operation>
+<question num = "19" content="Can you see any indentation problems?" type="MULTI_CHOICE">
+<option num ="0"  content="Yes"></option>
+<option num ="1"  content="No"></option>
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "20">
+<change num = "1">
+<docname>FindErrorsProblem</docname>
+<fragname id="2194069b-1a6f-4e0d-adc8-2657e0edf58e">words</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsProblem</docname>
+<fragname id="de5378ab-4d5f-4c8a-9d0e-209ceedab3be">        return </fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>Well, there is an indentation problem.  Take a look at the highlighted line - the return statement.  There is a problem with the indentation.  Try to write down precisely what the problem is and how you would solve it in the next step...</explanation>
+</step>
+<step num = "21">
+<change num = "1">
+<docname>FindErrorsStrategies</docname>
+<operation>Ask Answer</operation>
+<question num = "21" content="Write down how you would explain the indentation problem with the return statement, and how you would solve it." type="DESCRIPTIVE">
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "22">
+<change num = "1">
+<docname>FindErrorsAnswers</docname>
+<fragname id="afcfa1d6-5b74-4fac-a8cf-8b3e1f867a6f">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsAnswers</docname>
+<fragname id="dfe03ce9-a931-4d5f-a219-a753295b1aa0">3.  The return statement is not indented correctly.  Just now the function will return the first time a valid word is found.  It should be moved out to the same indentation as the for loop header - that is, it should only be executed once the for loop is finished.;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Again, compare answers.  Note how the effect of the error is described too, really showing that it is fully understood.
+
+The rest of the indentation is ok, so let's move on to the final strategy for finding errors.</explanation>
+</step>
+<step num = "23">
+<change num = "1">
+<docname>FindErrorsStrategies</docname>
+<fragname id="c8f58e36-a198-4d6e-8b8a-275f386d8877">6.  Are the computations required by the problem being performed correctly?  This isn't just arithmetic operations - are all the boolean and string and list and dictionary operations correct?;</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsStrategies</docname>
+<fragname id="cd376025-8d81-47d3-9535-93c9b7afbe41">5.  In Python, indentation is important.  Is every statement at the correct indentation level?  It is easy to miss this, so look carefully.;</fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "3">
+<docname>FindErrorsProblem</docname>
+<fragname id="de5378ab-4d5f-4c8a-9d0e-209ceedab3be">        return </fragname>
+<operation>Unhighlight</operation>
+</change>
+<change num = "4">
+<docname>FindErrorsProblem</docname>
+<fragname id="2194069b-1a6f-4e0d-adc8-2657e0edf58e">words</fragname>
+<operation>Unhighlight</operation>
+</change>
+<explanation>Finally, we need to check any computations being performed in the code.
+
+Take a look at the code.  What have we not examined closely already?</explanation>
+</step>
+<step num = "24">
+<change num = "1">
+<docname>FindErrorsProblem</docname>
+<fragname id="bf28b6a9-c4bd-428a-8c75-ac4bd418bce5">i</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsProblem</docname>
+<fragname id="2b6d8930-eb11-45b1-9537-f6a37d939f56"> + </fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "3">
+<docname>FindErrorsProblem</docname>
+<fragname id="c9096dfd-9ad5-4e70-98a8-f1f82ee4bc99">words</fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "4">
+<docname>FindErrorsProblem</docname>
+<fragname id="85cfaebb-d86a-469d-9059-21946e1526af"> = </fragname>
+<operation>Highlight</operation>
+</change>
+<change num = "5">
+<docname>FindErrorsProblem</docname>
+<fragname id="47e3f720-176f-473c-8a3c-d2ee7f7bdb03">            words</fragname>
+<operation>Highlight</operation>
+</change>
+<explanation>This is about the only calculation line we haven't checked carefully yet.  The condition in the if has been done.  The initialisation of the variables has been done (and we've fixed that problem with this line).  The loop is ok.  So there's just this line.  Does it look ok?</explanation>
+</step>
+<step num = "25">
+<change num = "1">
+<docname>FindErrorsProblem</docname>
+<operation>Ask Answer</operation>
+<question num = "25" content="Is this line ok?" type="MULTI_CHOICE">
+<option num ="0"  content="Yes"></option>
+<option num ="1"  content="No"></option>
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "26">
+<explanation>Well actually, it's not ok.  Can you see why?  Write down what you think the problem is and how to solve it in the next step...</explanation>
+</step>
+<step num = "27">
+<change num = "1">
+<docname>FindErrorsProblem</docname>
+<operation>Ask Answer</operation>
+<question num = "27" content="Write down what you think is wrong with this line, and how to correct it." type="DESCRIPTIVE">
+</question>
+</change>
+<explanation>No explanation</explanation>
+</step>
+<step num = "28">
+<change num = "1">
+<docname>FindErrorsAnswers</docname>
+<fragname id="4d7e52db-0605-4c56-b3be-f4b221da4ca6">    words = words + [i];</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "2">
+<docname>FindErrorsAnswers</docname>
+<fragname id="49b5f917-dd3d-4ddd-b705-dffce314958f">;</fragname>
+<operation>Insert</operation>
+</change>
+<change num = "3">
+<docname>FindErrorsAnswers</docname>
+<fragname id="033c8bfc-6efb-403a-b9bb-0afdd81eaf2f">4.  The update to the words variable on line 5 is incorrect.  A word is being added to a list, but only lists can be added to lists.  The line should read:;</fragname>
+<operation>Insert</operation>
+</change>
+<explanation>Compare answers again - you should have both the cause of the error - that you cannot add a string to a list - and the solution - that you need to put the string in a list on its own - then it can be added to the words list.</explanation>
+</step>
+<step num = "29">
+<explanation>And with that, we're done - we've found our four errors.
+
+You may have other strategies as well - feel free to post them on Moodle for others to make use of.
+
+In any case, have these at your fingertips in the exam, so that if you can't immediately see the errors just by looking at the code, you have a set of actions you can apply to the code to hopefully find those errors.</explanation>
+</step>
+</process>
+</processes>

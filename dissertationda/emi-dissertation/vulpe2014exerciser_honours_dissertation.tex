@@ -1,0 +1,65 @@
+\documentclass{template}
+
+% Used Packages
+\usepackage{url}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{graphics,graphicx}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{ifthen}
+\usepackage{tabularx}
+\usepackage{subfigure}
+\usepackage{mathpazo}
+\usepackage[numbers]{natbib}
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{longtable}
+\usepackage{pdfpages}
+\usepackage[textfont=bf]{caption}
+
+% Document Metadata
+\title{\bf \emph{Exerciser:} An Educational Tool}
+\author{Emilia Vulpe\\1106723\\\href{mailto:1106723V@student.gla.ac.uk}{\texttt{1106723V@student.gla.ac.uk}}}
+\date{\today}
+
+% Set-Up Data
+%\setcounter{tocdepth}{3}
+%\setcounter{secnumdepth}{3}
+\hypersetup{
+	pdftitle =
+		Exerciser: An Educational Tool,
+	pdfauthor = 
+		Emilia Vulpe
+}
+
+% Commands
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+\newcommand{\comment}[1]{\hl{#1}}
+
+\newcommand{\musthave}{\textcolor{red}\protect\marginpar{\bf \textcolor{BrickRed}{MH}}}
+\newcommand{\shouldhave}{\textcolor{red}\protect\marginpar{\bf \textcolor{PineGreen}{SH}}}
+\newcommand{\couldhave}{\textcolor{red}\protect\marginpar{\bf \textcolor{MidnightBlue}{CH}}}
+
+\begin{document}
+	\maketitle
+	\input{chapters/abstract}
+	\input{chapters/acknowledgements}
+	\educationalconsent
+	\onehalfspacing
+	
+	\tableofcontents
+	
+	\input{chapters/introduction}
+	\input{chapters/requirements}
+	\input{chapters/exerciser}
+	\input{chapters/evaluation}
+	\input{chapters/conclusion}
+	
+	\bibliographystyle{apalike}
+	\bibliography{references}
+\end{document}

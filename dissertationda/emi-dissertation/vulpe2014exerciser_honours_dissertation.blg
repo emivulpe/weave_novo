@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/MacPorts 2013_5)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: vulpe2014exerciser_honours_dissertation.aux
+The style file: apalike.bst
+Database file #1: references.bib
+You've used 1 entry,
+            1935 wiz_defined-function locations,
+            477 strings with 3935 characters,
+and the built_in function-call counts, 364 in all, are:
+= -- 33
+> -- 13
+< -- 1
++ -- 4
+- -- 4
+* -- 25
+:= -- 67
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 7
+chr.to.int$ -- 1
+cite$ -- 1
+duplicate$ -- 18
+empty$ -- 30
+format.name$ -- 7
+if$ -- 72
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 3
+pop$ -- 10
+preamble$ -- 1
+purify$ -- 7
+quote$ -- 0
+skip$ -- 10
+stack$ -- 0
+substring$ -- 12
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 6
+warning$ -- 0
+while$ -- 2
+width$ -- 0
+write$ -- 15

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<title>Group Sheet</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.css' %}" />
+		<style>
+		.ui-dialog-titlebar-close{
+			display: none;
+		}
+		.ui-front {
+			z-index:1000000;
+
+		}
+		.ui-dialog {
+			margin:50px;
+
+		}
+		
+		</style>
+	</head>
+	
+	<body>
+	
+	<div id="information_dialog" title="Group Sheet Information" style="margin:20px;display:none;">
+		<div id = "message">
+			<p>
+				This page is designed so you can print it, and then fill in student names.  You can then cut off the right hand strip of user ids, and pass them to the relevant students.  Then you and the student have a record of their unique user id.” </p>
+
+			<p> Some teachers have suggested that you would hand them out and take them in again on each lesson where you were using the system.  Alternatively, the pupils just keep their id safely, for use in the classroom or at home.  You always have the original on paper. </p>
+
+			<p> We do not keep your name or your pupils’ names on-line, so keep the mapping from name to user id secure.  You can select the columns of user id here and paste them into a spreadsheet, and keep a more secure copy of name to id there, if you wish. </p>
+		</div>
+	</div>
+	
+	
+	
+		<table border="1" style="width:100%;border: 1px solid black;border-collapse: collapse; ">
+			<caption>Academic Year: {{ year }}, Group: {{ group }} </caption>
+			<tr>
+				<th>Firstname</th>
+				<th>Lastname</th> 
+				<th>Student ID</th>
+				<th>Student ID</th>
+			</tr>
+			{% for student in students %}
+			
+			<tr>
+				<td></td>
+				<td></td>		
+				<td>{{student.student_id}}</td>
+				<td>{{student.student_id}}</td>
+			</tr>		
+			{% endfor %}
+		</table>
+	</body>
+</html>
+
+<script type="text/javascript" src="{% static 'js/jquery-2.1.1.js'  %}"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script>
+    $( "#information_dialog" ).dialog({
+	width: $(window).width()*0.9,
+      modal: true,
+	  autoOpen: true,
+      buttons: {
+        "OK": function() {
+          $( this ).dialog( "close" );
+		 // $("#consent_value").val("true");
+		  //$('#user_form').trigger('submit', [true]);
+		  //$("#user_form").submit();
+		  //location.reload(); // Reload the page to reflect the new changes
+        }
+      }
+	});
+</script>
+

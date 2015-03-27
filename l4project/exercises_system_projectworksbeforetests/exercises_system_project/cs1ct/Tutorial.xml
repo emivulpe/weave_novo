@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<Tutorials>
+	<Tutorial title = "Student's Operating Instruction" id="8" System = "true">
+		<Page pageTitle = "Playing Worked Example" id="0"></Page>
+		<Page pageTitle = "Looking up Glossary" id="1"></Page>
+		<Page pageTitle = "Taking a Tutorial" id="2"></Page>
+		<Page pageTitle = "Send Feedback" id="3"></Page>
+	</Tutorial>
+</Tutorials>

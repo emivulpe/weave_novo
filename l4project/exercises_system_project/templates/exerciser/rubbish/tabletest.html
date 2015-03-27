@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html style = "margin-top:0px;">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style> 
+		table {
+			border: 1px solid #000;
+			height: 400px;
+			width:100%
+		}
+		td {
+			border: 1px solid #000
+		}
+	</style>
+
+	</head>
+
+	<body>
+
+
+
+		<table>
+			<tr>
+				<td>First!!</td>
+				<td>second!</td>
+			</tr>
+			<tr>
+				<td>third</td>
+				<td>last .. :(</td>
+			</tr>
+		</table>
+	</body>
+</html>
+<script type="text/javascript" src="./jquery-new.js"></script>
+<script type="text/javascript" src="./jquery-ui.js"></script>
+<script type="text/javascript">
+	$("td").resizable({
+		handles: 's, e',
+		resize: function (event, ui) {
+			console.log(ui.size.height);
+			$(this).siblings().height(ui.size.height);
+		}
+	});
+</script>
